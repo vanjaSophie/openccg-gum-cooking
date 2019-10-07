@@ -15,20 +15,6 @@ Licence:     This file is free software; you can redistribute it and/or modify
 ======================================================================================== -->
 
 <!-- ====================================================================================
-Important manual modifications: (Marked below with   MOD: key   )
-
-2018-11-27 key: CLOSED=TRUE
-    @shoeffner: marked all families as closed = true due to the comment in ccg.ply:
-
-            # Actually, we *always* need classes closed, due to a bizarreness in
-            # OpenCCG.
-
-    See also:
-    https://github.com/OpenCCG/openccg/blob/f35e058ec6939521653773a0a3bf788921966590/src/ccg2xml/ccg.ply#L2303-L2306
-===================================================================================== -->
-
-
-<!-- ====================================================================================
 
  Lexicon file for the DiaSpace English CCG grammar.
 
@@ -800,7 +786,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     NOT USED ANY MORE, TEMPORARILY KEPT FOR SECURITY REASONS
     Family name:     v.orientation.change.make.simple
     Pos:             V
-    Description:     used to specify an orientation change with a make verb and a nominalised
+    Description:     Used to specify an orientation change with a make verb and a nominalised
                      orientation process. This only works for non-affecting processes.
     Entries :        nonaffecting-pp: s\.np/*np/>pp
                      nonaffecting-adv: s\.np/*np/>adv
@@ -810,7 +796,6 @@ Important manual modifications: (Marked below with   MOD: key   )
                      he (made) a 360 degree turn to the left
                      he (made) a turn
     ============================================================================ -->
-
   <family pos="V" name="v.orientation.change.make.simple" closed="true">
     <entry name="nonaffecting-pp">
       <complexcat>
@@ -935,13 +920,12 @@ Important manual modifications: (Marked below with   MOD: key   )
         </lf>
       </complexcat>
     </entry>
-    <member stem="make" pred="slm-Making" />
+    <member stem="make" pred="glm-Making" />
   </family>
-
   <!-- ==============================================================================
     Family name:     v.simple.make
     Pos:             V
-    Description:     used for "make"-constructions that require a nominalised process.
+    Description:     Used for "make"-constructions that require a nominalised process.
                      This only works for non-affecting processes.
     Entries :        s./nomp*\np
                      s./nq*\np
@@ -1051,11 +1035,10 @@ Important manual modifications: (Marked below with   MOD: key   )
     </entry>
     <member stem="make" />
   </family>
-
   <!-- ==============================================================================
     Family name:     v.orientation.change.simple
     Pos:             V
-    Description:     used to specify an affecting orienting change in either the simple
+    Description:     Used to specify an affecting orienting change in either the simple
                      present or simple past tense.
     Entries :        affecting-pp: s\.np/>pp/>np
                      affecting-adv: s\.np/>adv/>np
@@ -1315,11 +1298,10 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="veer"/>
     <member stem="rotate"/>
   </family>
-
   <!-- ==============================================================================
     Family name:     v.orientation.change.main
     Pos:             V.main
-    Description:     used to specify an orientation change in the imperative mood.
+    Description:     Used to specify an orientation change in the imperative mood.
     Entries :        affecting-pp: smain/>pp/>np
                      affecting-adv: smain/>adv/>np
                      nonaffecting-pp: smain/>pp
@@ -1681,11 +1663,10 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="veer"  />
     <member stem="rotate" />
   </family>
-
   <!-- ==============================================================================
     Family name:     v.orientation.change.prp
     Pos:             V.prp
-    Description:     used to specify an the infinite component of an affecting orienting
+    Description:     Used to specify an the infinite component of an affecting orienting
                      change.
     Entries :        nonaffecting-pp: s.prp/.pp
                      nonaffecting-adv: s.prp/.adv
@@ -1893,7 +1874,6 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="veer"  />
     <member stem="rotate" />
   </family>
-
   <!-- ==============================================================================
     family name:     v.simple.motion.nonaffecting.prp
     pos:             V.prp
@@ -2036,8 +2016,6 @@ Important manual modifications: (Marked below with   MOD: key   )
     description:     Category of simple motions which do have an affectee in the infinite form
     Entries :        primary  :  s.prp/*np
     Example Parse:   she was (stirring) the
-
-
     ============================================================================ -->
   <family pos="V.prp" name="v.simple.motion.affecting.prp" closed="true">
     <entry name="primary">
@@ -2261,154 +2239,8 @@ Important manual modifications: (Marked below with   MOD: key   )
     </entry>
     <member stem="stir" />
     <member stem="swirl"  />
-	<member stem="cut"  />
 	<member stem="mix"  />
   </family>
-
-
-   <!-- ==============================================================================
-   ADDED CAT (03.11.18) created for a cooking domain
-    ============================================================================ -->
-
-
-   <!-- ==============================================================================
-    family name:     v.simple.motion.affecting.main
-    pos:             V.main
-    description:     Category of simple motions which do have an affectee in the imperative // description must be changed
-
-    Entries:         primary  :  smain/*np
-    secondary:       smain/*np/*adv
-
-    Example Parse:   (heat) the oil 		smain/np
-
-                     (heat) the oil in a frying pan 	smain/np/pp
-
-
-					not parsed, in progress:
-                    (heat) half of the butter in a frying pan
-					(heat) 10 ml of the olive oil in a pan
-                    (heat) it up // what about phrasal verbs which combine two or three words from different grammatical categories?
-                    (heat) the oil and butter in a heavy-based 	V+NP+KONJ+NP+PP
-    ============================================================================ -->
-  <family pos="V.main" name="v.simple.motion.affecting.main" closed="true">
-    <entry name="primary">
-      <complexcat>
-        <atomcat type="smain">
-          <fs id="1">
-            <feat attr="num">
-              <featvar name="NUM" />
-            </feat>
-            <feat attr="pers">
-              <featvar name="PERS" />
-            </feat>
-            <feat attr="index">
-              <lf>
-                <nomvar name="E" />
-              </lf>
-            </feat>
-          </fs>
-        </atomcat>
-        <slash mode="*" dir="/" />
-        <atomcat type="np">
-          <fs id="3">
-            <feat attr="index">
-              <lf>
-                <nomvar name="A:gum-SimpleThing" />
-              </lf>
-            </feat>
-          </fs>
-        </atomcat>
-        <lf>
-          <satop nomvar="E:gs-AffectingSimpleMotion">
-            <diamond mode="gum-processInConfiguration">
-              <nomvar name="P:gum-Process" />
-              <prop name="[*DEFAULT*]" />
-            </diamond>
-            <diamond mode="mood">
-              <nomvar name="imperative" />
-            </diamond>
-            <diamond mode="uio-hasSurfaceFunction">
-              <prop name="uio-Directive" />
-            </diamond>
-            <diamond mode="gum-actee">
-              <nomvar name="A" />
-            </diamond>
-          </satop>
-        </lf>
-      </complexcat>
-    </entry>
-    <entry name="secondary">
-      <complexcat>
-        <atomcat type="smain">
-          <fs id="1">
-            <feat attr="num">
-              <featvar name="NUM" />
-            </feat>
-            <feat attr="pers">
-              <featvar name="PERS" />
-            </feat>
-            <feat attr="index">
-              <lf>
-                <nomvar name="E" />
-              </lf>
-            </feat>
-          </fs>
-        </atomcat>
-        <slash mode="*" dir="/" />
-        <atomcat type="np">
-          <fs id="3">
-            <feat attr="index">
-              <lf>
-                <nomvar name="A:gum-SimpleThing" />
-              </lf>
-            </feat>
-          </fs>
-        </atomcat>
-        <slash mode="*" dir="/" />
-        <atomcat type="adv">
-          <fs id="4">
-            <feat attr="index">
-              <lf>
-                <nomvar name="B:gs-SpatialModality" />
-              </lf>
-            </feat>
-          </fs>
-        </atomcat>
-        <lf>
-          <satop nomvar="E:gs-AffectingSimpleMotion">
-            <diamond mode="gum-processInConfiguration">
-              <nomvar name="P:gum-Process" />
-              <prop name="[*DEFAULT*]" />
-            </diamond>
-            <diamond mode="mood">
-              <nomvar name="imperative" />
-            </diamond>
-            <diamond mode="uio-hasSurfaceFunction">
-              <prop name="uio-Directive" />
-            </diamond>
-            <diamond mode="gs-orientationDirection">
-              <nomvar name="D:gs-GeneralizedLocation" />
-              <diamond mode="gs-hasSpatialModality">
-                <nomvar name="B" />
-              </diamond>
-            </diamond>
-            <diamond mode="gum-actee">
-              <nomvar name="A" />
-            </diamond>
-          </satop>
-        </lf>
-      </complexcat>
-    </entry>
-    <member stem="heat" />
-
-  </family>
-
-
-
-
-
-
-
   <!-- ==============================================================================
     family name:     v.simple.motion.affecting.simple
     pos:             V
@@ -2551,7 +2383,7 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     family name:     v.NonAffectingDirectedMotion.prp
     pos:             V.prp
-    description:     movement verbs in infinite form which forward bind to the prepositional
+    description:     Movement verbs in infinite form which forward bind to the prepositional
                      phrase / Generalized Locations which make up a complete route structure.
                      Using a 'setarg' has the advantage that we do not have to create lots of
                      different entries for permutations of source, path entities, destinations
@@ -2625,7 +2457,7 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     family name:     v.NonAffectingDirectedMotion.main
     pos:             V.main
-    description:     movement verbs in infinite form which forward bind to the prepositional
+    description:     Movement verbs in infinite form which forward bind to the prepositional
                      phrase / Generalized Locaions which make up a complete route structure.
                      Using a 'setarg' has the advantage that we do not have to create lots of
                      different entries for permutations of source, path entities, destinations
@@ -2754,7 +2586,7 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     family name:     v.NonAffectingDirectedMotion.simple
     pos:             V
-    description:     movement verbs which forward bind to the prepositional
+    description:     Movement verbs which forward bind to the prepositional
                      phrase / Generalized Locaions which make up a complete route structure.
                      Using a 'setarg' has the advantage that we do not have to create lots of
                      different entries for permutations of source, path entities, destinations
@@ -2841,12 +2673,12 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     family name:     v.AffectingDirectedMotion.prp
     pos:             V.prp
-    description:     movement verbs in infinite form which forward bind to a noun phrase
-    which plays the role of actee and a prepositional
-    phrase / Generalized Locaions which make up a complete route structure.
+    description:     Movement verbs in infinite form which forward bind to a noun phrase
+                     which plays the role of actee and a prepositional phrase
+                     / Generalized Locations which make up a complete route structure.
     Entries :        primary : s.prp/.r/*np
     Example Parse:   I am (bringing) you from the bathroom to the kitchen via the office
-    he is (moving) the apple onto the table
+                     he is (moving) the apple onto the table
     ============================================================================ -->
   <family pos="V.prp" name="v.AffectingDirectedMotion.prp" closed="true">
     <entry name="primary">
@@ -2913,12 +2745,12 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     family name:     v.AffectingDirectedMotion.main
     pos:             V.main
-    description:     movement verbs in infinite form which forward bind to a noun phrase
-    which plays the role of actee and a prepositional
-    phrase / Generalized Locaions which make up a complete route structure.
+    description:     Movement verbs in infinite form which forward bind to a noun phrase
+                     which plays the role of actee and a prepositional phrase
+                     / Generalized Locations which make up a complete route structure.
     Entries :        primary : smain/.r/*np
     Example Parse:   (bring) the box from the bathroom to the kitchen via the office
-    (move) the apple onto the table
+                     (move) the apple onto the table
     ============================================================================ -->
   <family pos="V.main" name="v.AffectingDirectedMotion.main" closed="true">
     <entry name="primary">
@@ -2994,11 +2826,11 @@ Important manual modifications: (Marked below with   MOD: key   )
     family name:     v.AffectingDirectedMotion.simple
     pos:             V
     description:     movement verbs which forward bind to a noun phrase
-                     which plays the role of actee and a prepositional
-                     phrase / Generalized Locaions which make up a complete route structure.
+                     which plays the role of actee and a prepositional phrase
+                     / Generalized Locations which make up a complete route structure.
     Entries:         primary : s/.r/.np\*np
-    Example Parse:   i (brought) the box from the bathroom to the kitchen via the office
-                     i (moved) the apple onto the table
+    Example Parse:   I (brought) the box from the bathroom to the kitchen via the office
+                     I (moved) the apple onto the table
     ============================================================================ -->
   <family pos="V" name="v.AffectingDirectedMotion.imp" closed="true">
     <entry name="primary">
@@ -3080,20 +2912,20 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     family name:     v.AffectingDirectedMotion.dest.prp
     pos:             V.prp
-    description:     movement verbs in infinite form which forward bind to a noun phrase
-    which plays the role of actee and a prepositional
-    phrase / Generalized Locaions which make up the destination only
-    in a complete route structure. No sources or path entities are
-    allowed with this sort of spatial movement.
-    Unlike in the standard directed motion families, we have tow entires.
-    The first of these is for standard 'dynamic' propeositions as in the
-    case of other affecting actions, while the second entry accounts for
-    the fact that classically static prepositions can play a dynamic role
-    with these verbs. to illustrate
-    he is putting the cup onto the table
-    he is putting the cup on the table
-    he is moving the cup onto the table
-    *he is moving the cup on the table
+    description:     Movement verbs in infinite form which forward bind to a noun phrase
+                     which plays the role of actee and a prepositional phrase
+                     / Generalized Locations which make up the destination only
+                     in a complete route structure. No sources or path entities are
+                     allowed with this sort of spatial movement.
+                     Unlike in the standard directed motion families, we have two entries.
+                     The first of these is for standard 'dynamic' prepositions as in the
+                     case of other affecting actions, while the second entry accounts for
+                     the fact that classically static prepositions can play a dynamic role
+                     with these verbs. To illustrate
+                          he is putting the cup onto the table
+                          he is putting the cup on the table
+                          he is moving the cup onto the table
+                         *he is moving the cup on the table
     Entries :        dynamic : s.prp/>pp_dynamic/.np
     Example Parse:   he is (putting) the cup onto the table
     ============================================================================ -->
@@ -3161,20 +2993,20 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     family name:     v.AffectingDirectedMotion.dest.main
     pos:             V.main
-    description:     movement verbs in infinite form which forward bind to a noun phrase
-                     which plays the role of actee and a prepositional
-                     phrase / Generalized Locaions which make up the destination only
+    description:     Movement verbs in infinite form which forward bind to a noun phrase
+                     which plays the role of actee and a prepositional phrase
+                     / Generalized Locations which make up the destination only
                      in a complete route structure. No sources or path entities are
                      allowed with this sort of spatial movement.
                      Unlike in the standard directed motion families, we have tow entires.
                      The first of these is for standard 'dynamic' prepositions as in the
                      case of other affecting actions, while the second entry accounts for
                      the fact that classically static prepositions can play a dynamic role
-                     with these verbs. to illustrate
-                     put the cup onto the table
-                     put the up on the table
-                     move the cup onto the table
-                     *move the cup on the table
+                     with these verbs. To illustrate
+                          put the cup onto the table
+                          put the up on the table
+                          move the cup onto the table
+                         *move the cup on the table
     Entries:         dynamic: smain/*pp/*np
     Example Parse:   (put) the cup onto the table
     ============================================================================ -->
@@ -3248,20 +3080,20 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     family name:     v.AffectingDirectedMotion.dest.simple
     pos:             V
-    description:     movement verbs which forward bind to a noun phrase
-                     which plays the role of actee and a prepositional
-                     phrase / Generalized Locaions which make up the destination only
+    description:     Movement verbs which forward bind to a noun phrase
+                     which plays the role of actee and a prepositional phrase
+                     / Generalized Locations which make up the destination only
                      in a complete route structure. No sources or path entities are
                      allowed with this sort of spatial movement.
                      Unlike in the standard directed motion families, we have tow entires.
                      The first of these is for standard 'dynamic' propeositions as in the
                      case of other affecting actions, while the second entry accounts for
                      the fact that classically static prepositions can play a dynamic role
-                     with these verbs. to illustrate
-                     he put the cup onto the table
-                     he put the up on the table
-                     he moved the cup onto the table
-                     *he moved the cup on the table
+                     with these verbs. To illustrate
+                          he put the cup onto the table
+                          he put the up on the table
+                          he moved the cup onto the table
+                         *he moved the cup on the table
     Entries:         dynamic: s/.pp/.np\*np
     Example Parse:   he (put) the cup onto the table
     ============================================================================ -->
@@ -3547,7 +3379,7 @@ Important manual modifications: (Marked below with   MOD: key   )
                      provided by the semantics attached to the morphology entry.
     Entries:         primary: smain/.np
                      secondary: smain/.r
-    Example Parse:   (pass) the kitcen
+    Example Parse:   (pass) the kitchen
     ============================================================================ -->
   <family closed="true" pos="V.main" name="v.pass.main">
     <entry name="primary">
@@ -3660,7 +3492,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     pos:             V.prp
     description:     infinite form of pass
     Entries :        primary : s.prp/.np
-    Example Parse:   we are (pssing) the kitchen
+    Example Parse:   we are (passing) the kitchen
     ============================================================================ -->
   <family closed="true" pos="V.prp" name="v.moving.prp">
     <entry name="primary">
@@ -3717,7 +3549,6 @@ Important manual modifications: (Marked below with   MOD: key   )
     </entry>
     <member stem="pass" />
   </family>
-
   <!-- ==============================================================================
     family name:     v.leave.main
     pos:             VL
@@ -3883,7 +3714,6 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="leave" />
     <member stem="exit" />
   </family>
-
   <!-- ==============================================================================
     family name:     v.follow.main
     pos:             V
@@ -4002,7 +3832,6 @@ Important manual modifications: (Marked below with   MOD: key   )
     </entry>
     <member stem="follow" />
   </family>
-
   <!-- ==============================================================================
     family name:     v.approach.main
     pos:             V
@@ -4120,7 +3949,6 @@ Important manual modifications: (Marked below with   MOD: key   )
     </entry>
     <member stem="approach" />
   </family>
-
   <!-- ==============================================================================
     family name:     v.enter.main
     pos:             V
@@ -4282,7 +4110,6 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="enter" />
     <member stem="reach" />
   </family>
-
   <!-- ==============================================================================
     family name:     v.bring.main (transitive)
     pos:             V.main
@@ -4353,13 +4180,12 @@ Important manual modifications: (Marked below with   MOD: key   )
     </lf>
     </complexcat>
     </entry>
-    <member stem="bring"   pred="slm-Bringing"/>
-    <member stem="guide"   pred="slm-Guiding"/>
-    <member stem="take"    pred="slm-Taking"/>
-    <member stem="drive"   pred="slm-Driving"/>
-    <member stem="direct"  pred="slm-Directing"/>
+    <member stem="bring"   pred="glm-Bringing"/>
+    <member stem="guide"   pred="glm-Guiding"/>
+    <member stem="take"    pred="glm-Taking"/>
+    <member stem="drive"   pred="glm-Driving"/>
+    <member stem="direct"  pred="glm-Directing"/>
     </family> -->
-
   <!-- ==============================================================================
     family name:     v.take.main
     pos:             V.main
@@ -4466,13 +4292,12 @@ Important manual modifications: (Marked below with   MOD: key   )
         </lf>
       </complexcat>
     </entry>
-    <member stem="take_turn" />
+    <member stem="take" />
   </family>
-
   <!-- ==============================================================================
     family name:     v.stop.main
     pos:             V
-    description:     "Stop" or "halt" as a atomic "motion command"
+    description:     "Stop" or "halt" as an atomic "motion command"
     Entries :        primary  : s
     Example Parse:   (stop) now
     ============================================================================ -->
@@ -4801,13 +4626,12 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="show" />
     <member stem="tell" />
   </family>
-
   <!-- ==============================================================================
     family name:     v.know.main
     pos:             V.main
     description:     Simple knowing or meaning expressions
     Entries:         primary: s\.np
-    Example Parse:   (I know) where christians office is
+    Example Parse:   (I know) where Christian's office is
                      (I mean) the left office
     ============================================================================ -->
   <family closed="true" pos="V.main" name="v.know.main">
@@ -4852,14 +4676,13 @@ Important manual modifications: (Marked below with   MOD: key   )
       <member stem="know" />
       <member stem="believe"  />
   </family>
-
   <!-- ==============================================================================
     family name:     v.inf.know
     pos:             V
     description:     Imperatives to know or mean something, with one object
     Entries:         showobj: s/.np
                      showsubcl: s/*s
-    Example Parse:   do you ((know) where christians office is)
+    Example Parse:   do you ((know) where Christian's office is)
                      do you ((mean) the left office or the right office)
     ============================================================================ -->
   <family closed="true" pos="V" name="v.inf.know">
@@ -4952,8 +4775,71 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="know"  />
     <member stem="believe"  />
   </family>
+<!-- ==============================================================================
+    family name:    v.dispositive.material.action.main
+    pos:            V.main
+    description:    Category of general DispositiveMaterialActions which have an
+                    affectee in the imperative. TODO: dummy category for cooking
+                    instructions
+    Entries:        smain/*np
+    Example Parse:  (boil) the water
+    ============================================================================ -->
+  <family pos="V.main" name="v.dispositive.material.action.main" closed="true">
+    <entry name="primary">
+      <complexcat>
+        <atomcat type="smain">
+          <fs id="1">
+            <feat attr="num">
+              <featvar name="NUM" />
+            </feat>
+            <feat attr="pers">
+              <featvar name="PERS" />
+            </feat>
+            <feat attr="index">
+              <lf>
+                <nomvar name="E" />
+              </lf>
+            </feat>
+          </fs>
+        </atomcat>
+        <slash mode="*" dir="/" />
+        <atomcat type="np">
+          <fs id="3">
+            <feat attr="index">
+              <lf>
+                <nomvar name="A:gum-SimpleThing" />
+              </lf>
+            </feat>
+          </fs>
+        </atomcat>
+        <lf>
+          <satop nomvar="E:gum-DispositiveMaterialAction">
+            <diamond mode="gum-processInConfiguration">
+              <nomvar name="P:gum-Process" />
+              <prop name="[*DEFAULT*]" />
+            </diamond>
+            <diamond mode="mood">
+              <nomvar name="imperative" />
+            </diamond>
+            <diamond mode="uio-hasSurfaceFunction">
+              <prop name="uio-Directive" />
+            </diamond>
+            <diamond mode="gum-actee">
+              <nomvar name="A" />
+            </diamond>
+          </satop>
+        </lf>
+      </complexcat>
+    </entry>
+    <member stem="stir" />
+    <member stem="swirl" />
+    <member stem="boil" />
+    <member stem="heat" />
+    <member stem="whisk" />
+  </family>
+
   <!-- ==============================================================================
-    Some non spatial auxillary entries
+    Some non spatial auxiliary entries
     ============================================================================== -->
   <!-- ==============================================================================
     family name:     v.is.existence
@@ -5002,13 +4888,13 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     family name:     v.is.existence.short
     pos:             V
-    description:     Categoriy used for constructing existential configurationals around
+    description:     Category used for constructing existential configurationals around
                      instances of the term 'there's'
     Entries :
     Example Parse:   there's a box
                      there's a halo beyond pluto
     ============================================================================ -->
-  <family pos="V.exist" name="v.is.existence.short" closed="true"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="V.exist" name="v.is.existence.short">
     <entry name="primary">
       <complexcat>
         <atomcat type="s">
@@ -5043,7 +4929,7 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     family name:     exists.there
     pos:             EXISTS
-    description:     Categoriy for the 'there' in an existential statement like
+    description:     Category for the 'there' in an existential statement like
                      "there is a box"
     Example Parse:   there is a box
     ============================================================================ -->
@@ -5078,12 +4964,12 @@ Important manual modifications: (Marked below with   MOD: key   )
                         to "the cup is into the box"
                         and "the kitchen is until the kitchen"
 
-                        For now we will not allow these over generailizations.
+                        For now we will not allow these over generalizations.
                         We can stamp them out by requiring that the propositional
                         phrase has a kind = static rather than dynamic.
 
-                        Example Memeber: faces, surrounds, is, am, are
-                        Example Parse:   the kitchen (is) to the left
+    Example Member:     faces, surrounds, is, am, are
+    Example Parse:      the kitchen (is) to the left
                         to the left (is) the kitchen
                         he was at the cinema at five o'clock
                         at five o'clock he was at the cinema
@@ -5267,14 +5153,13 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="am" />
     <member stem="stand" />
   </family>
-
   <!-- ==============================================================================
     family name:     v.temploc
     pos:             V
     Entries :        primary      : s\.np/.pp
     description:     Temporal locating expression with spatial element
 
-    Example Memeber: is
+    Example Member:  is
     Example Parse:   the meeting (is) at five o'clock
     ============================================================================ -->
   <family pos="V" name="v.temploc" closed="true">
@@ -5334,7 +5219,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     Entries :        primary      : s\.np/.pp/.pp
     description:     Spatial temporal locating of an event.
 
-    Example Memeber: is
+    Example Member:  is
     Example Parse:   the meeting (is) at five o'clock in the building
     ============================================================================ -->
   <family pos="V" name="v.spattemploc" closed="true">
@@ -5408,7 +5293,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     pos:             V
     Entries :        locating  :  s\.np/.np
     description:     Give a spatial location for a thing with a direct object
-    Example Memeber: faces, surrounds
+    Example Member:  faces, surrounds
     Example Parse:   the kitchen (faces) the room
     ============================================================================ -->
   <family closed="true" pos="V" name="v.spatloc.obj">
@@ -5467,7 +5352,7 @@ Important manual modifications: (Marked below with   MOD: key   )
               </diamond>
             </diamond>
             <diamond mode="gum-processInConfiguration">
-              <nomvar name="H:slm-Being" />
+              <nomvar name="H:glm-Being" />
             </diamond>
           </satop>
         </lf>
@@ -5482,8 +5367,8 @@ Important manual modifications: (Marked below with   MOD: key   )
     pos:             V
     Entry "equus"    s\.np/.np
     description:     Describe something in terms of a class
-    Example Memeber: is, am, are
-    Example Parse:   this (is) an office)
+    Example Member:  is, am, are
+    Example Parse:   this (is) an office
     ============================================================================ -->
   <family closed="true" pos="V" name="v.equate">
     <entry name="equus">
@@ -5551,7 +5436,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     Entry "indicative": s\.np/.s.prp
     Entry "question":   s/.s.prp/.np
     description:        auxilary verbs for combining with infinite forms
-    Example Memeber:    is,am,are,aren't
+    Example Member:     is,am,are,aren't
     Example Parse:      we (are) going to the shop
                         she (is) dancing
     ============================================================================ -->
@@ -5673,8 +5558,8 @@ Important manual modifications: (Marked below with   MOD: key   )
     family name:     v.imp
     pos:             V
     Entry "modal"    s\.np/.s.prp
-    description:     expression of attitude towards a process.
-    Example Memeber: want
+    description:     Expression of attitude towards a process.
+    Example Member:  want
     Example Parse:   i (want) to go to the kitchen
     ============================================================================ -->
   <family closed="true" pos="V" name="v.imp">
@@ -5773,8 +5658,8 @@ Important manual modifications: (Marked below with   MOD: key   )
     family name:     v.want.np
     pos:             V
     Entry "primary": s\.np/.np
-    description:     expression of attitude towards a thing
-    Example Memeber: order, like, want
+    description:     Expression of attitude towards a thing
+    Example Member:  order, like, want
     Example Parse:   i (want) a coffee
     ============================================================================ -->
   <family closed="true" pos="V" name="v.want.np">
@@ -5845,6 +5730,7 @@ Important manual modifications: (Marked below with   MOD: key   )
       </complexcat>
     </entry>
     <member stem="want"  />
+    <member stem="would_like"  />
   </family>
   <!-- ==============================================================================
     Modal Auxilaries
@@ -5856,10 +5742,8 @@ Important manual modifications: (Marked below with   MOD: key   )
                      place emphasis on statements.
     Entry            statement: s\.np/.s
                      question: s/.s/
-
     Example Parse:   i (do) want to go to the shops
                      (do) you want to go to the shops
-
     ============================================================================ -->
   <family closed="true" pos="V" name="v.dummy" indexRel="hasSpeechFunction">
     <entry name="statement">
@@ -5979,7 +5863,7 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     family name:     v.modal
     pos:             V
-    description:     modal adjects for constructing questions and future aspect sentences.
+    description:     Modal adjects for constructing questions and future aspect sentences.
     Entries          canq: s/.s/.np
                      indicative: s\.np/.s
     Example Parse:   (can) we go to the kitchen
@@ -6094,7 +5978,6 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="shall" />
     <member stem="will" />
   </family>
-
   <!-- ==============================================================================
     PREPOSITIONS EXPECTING SPATIAL ENTITIES
 
@@ -6120,7 +6003,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     Entry            "prep.static.spatloc" : pp/*np
     Entry            "prep.npmodif" : np\*np/*np
     description:     Static prepositions
-    Example Memeber: behind, beside, at, near....
+    Example Member:  behind, beside, at, near....
     Example Parse:   the office is (beside) the lab :- pp/*np
                      the office (beside) the lab :- np\*np/*np
 
@@ -6320,7 +6203,7 @@ Important manual modifications: (Marked below with   MOD: key   )
               <diamond mode="gs-hasSpatialModality">
                 <nomvar name="M" />
                 <prop name="[*DEFAULT*]" />
-                <diamond mode="gum-hasQuantiativeExtent">
+                <diamond mode="gum-hasQuantitativeExtent">
                   <nomvar name="G2" />
                 </diamond>
               </diamond>
@@ -6527,7 +6410,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="off"  />
     <member stem="beside"  />
     <member stem="beyond"  />
-    <member stem="next-to"  />
+    <member stem="next_to"  />
     <member stem="near"  />
     <member stem="by"  />
     <member stem="against"  />
@@ -6546,14 +6429,13 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="far_away_from" />
     <member stem="close_to"  />
   </family>
-
   <!-- ==============================================================================
     Family name:     prep.static.incomplete
     Pos:             PREP.static
     Description:     Static prepositions which are incomplete without being complimented
-                     by a distance extent
+                     by a distance extent.
                      Only the primary category has been left in place. A few more are
-                     needed before
+                     needed before.
     Example Parse:   far (from) the door
                      close (to) the river
     ============================================================================ -->
@@ -6613,16 +6495,15 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="to"  />
     <member stem="from" />
   </family>
-
   <!-- ==============================================================================
     Family name:     spatial-deixis
-    Pos:             NP
-    Description:     category which constructs a GeneralizedLocation out of expressions
-    like 'here' and 'there'
-    Example Parse:  (here) is the kitchen
-    				turn left (there)
+    Pos:             ADV
+    Description:     Category which constructs a GeneralizedLocation out of expressions
+                     like 'here' and 'there'
+    Example Parse:   (here) is the kitchen
+    				         turn left (there)
     ============================================================================ -->
-  <family closed="true" pos="NP.space.deixis" name="spatial-deixis"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="ADV.space.deixis" name="spatial-deixis">
     <entry name="primary">
       <atomcat type="pp">
         <fs id="1">
@@ -6684,7 +6565,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     Entry "pp-lateral-spatloc": pp/*np
     Entry "prep.npmodif": np\*np/*np
     description:     Static directional PPs: "on the left"
-    Example Memeber: on, at, in
+    Example Member:  on, at, in
     Example Parse:   the kitchen (on) the left :- np\*np/*np (noun modifying)
 
     go to the kitchen (on) the left :- pp/*np (prepositional prases)
@@ -6792,7 +6673,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     pos:             PREP.static.directional
     Entry            primary :  pp/*np
     description:     Dynamic directional PPs: "to the left" etc.
-                     'to' is treated seperately to other static spatial preopositons
+                     'to' is treated seperately to other static spatial prepositions
                      in that it can only be applied to abstract spatial regions which
                      themselves always provide the actual spatial relation.
 
@@ -6809,7 +6690,7 @@ Important manual modifications: (Marked below with   MOD: key   )
                         or  'roberts right'
                      and will not be added here.
 
-    Example Memeber: to
+    Example Member:  to
     Example Parse:   the kitchen ((is) to the right)    :- pp/*np
     ============================================================================ -->
   <family pos="PREP.static.directional" closed="true" indexRel="*NoSem*" name="prep.static.directional">
@@ -6871,7 +6752,7 @@ Important manual modifications: (Marked below with   MOD: key   )
                          "(the cup to the right)"
                      which ideally produces a complete spatial locating configuration.
                      In practice though for the time being we will not produce a complete
-                     SpatailConfiguration, but instead an invested configuration similar
+                     SpatialConfiguration, but instead an invested configuration similar
                      to how we currently deal with "blue cups" and so forth. It goes something
                      like:
                         Cup
@@ -6885,7 +6766,7 @@ Important manual modifications: (Marked below with   MOD: key   )
                      or  'roberts right'
                     and will not be added here.
 
-    Example Memeber: to
+    Example Member:  to
     Example Parse:   (the cup (to) the right) is blue  :- np\*np/*np
     ============================================================================ -->
   <family pos="PREP.static.directional" closed="true" name="prep.static.directional.sl">
@@ -6943,23 +6824,22 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="to" />
     <member stem="on" />
   </family>
-
   <!-- ==============================================================================
     Family name:     prep.dynamic.source
     Pos:             PREP.dynamic
     Description:     Category of segment (path entity) like prepositions which typically
-    form the path entities within a GeneralizedRoute.
+                     form the path entities within a GeneralizedRoute.
     Entry            primary        : pp/*np
     route          : r/*pp
     route-dest     : r/*pp_goal/*np
     route-path     : r/*pp_segment/*np
     route-seg-dest : r{/*pp_source/*pp_segment}/*np
     Example Parse:   (from) the kitchen
-    (from) the kitchen to the bathroom
-    (from) the kitchen along the hall
-    (from) the kitchen along the hall to the bathroom
-    (from) the kitchen to the bathroom along the hall
-    (from) the kitchen along the hall past the window to the bathroom
+                     (from) the kitchen to the bathroom
+                     (from) the kitchen along the hall
+                     (from) the kitchen along the hall to the bathroom
+                     (from) the kitchen to the bathroom along the hall
+                     (from) the kitchen along the hall past the window to the bathroom
     ============================================================================ -->
   <family closed="true" pos="PREP.dynamic" name="prep.dynamic.source">
     <entry name="primary">
@@ -7259,8 +7139,8 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     Family name:     prep.dynamic.segment
     Pos:             PREP.dynamic
-    Description:     Category of segment (path entity) like prepositions which typically
-                     form the path entities within a GeneralizedRoute.
+    Description:     Category of segment (path entity) like prepositions which
+                     typically form the path entities within a GeneralizedRoute.
     Entries          primary               : pp/*np
     sequence              : pp/*pp_segment/*np
     route-single          : r/*np
@@ -7270,11 +7150,11 @@ Important manual modifications: (Marked below with   MOD: key   )
     route-dest-source     : r/*np{/*pp_source/*pp_goal}
     route-segment-dest    : r/*pp_goal/*pp_segment/*np
     Example Parse:  (along) the corridor
-    (along) the corridor past the kitchen
-    (along) the corridor to the kitchen
-    (along) the corridor from the kitchen
-    (along) the corridor past the kitchen from the elevator
-    (along) the corridor past the kitchen to my office
+                    (along) the corridor past the kitchen
+                    (along) the corridor to the kitchen
+                    (along) the corridor from the kitchen
+                    (along) the corridor past the kitchen from the elevator
+                    (along) the corridor past the kitchen to my office
 
     ============================================================================ -->
   <family closed="true" pos="PREP.dynamic" name="prep.dynamic.complex">
@@ -7854,7 +7734,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="off"  />
     <member stem="beside"  />
     <member stem="beyond" />
-    <member stem="next-to" />
+    <member stem="next_to" />
     <member stem="far_from" />
     <member stem="away_from" />
     <member stem="far_away_from" />
@@ -7874,27 +7754,27 @@ Important manual modifications: (Marked below with   MOD: key   )
     Family name:     prep.dynamic.goal
     Pos:             PREP.dynamic
     Description:     Category of goal (destination) like prepositions which typically
-    form the destination within a GeneralizedRoute.
+                     form the destination within a GeneralizedRoute.
     Entry            primary          : pp/*np
     route-single     : r/*np
     route-source     : r/*np/*pp_source
     route-segment    : r/*np/*pp_segment
     route-source-segment    : r/*np{/*pp_segment/*pp_source}
     Example Parse:   (to) the kitchen
-    (to) the kitchen from the bathroom
-    (to) the kitchen along the stairs
-    (to) the kitchen from the bathroom along the hallway
+                     (to) the kitchen from the bathroom
+                     (to) the kitchen along the stairs
+                     (to) the kitchen from the bathroom along the hallway
 
-    -for a cooking domain (03.11.18) not working, in progress-
+    -for the cooking domain (03.11.18) not working, in progress-
 
     Example Parse:
-    (until) al dente 		: pp/adj
-    (until) almost smooth
-	(until) hot
-	(until) crisp and golden-brown
+                     (until) al dente 		: pp/adj
+                     (until) almost smooth
+	                   (until) hot
+	                   (until) crisp and golden-brown
 
-    (until) a breadcrumb sizzles 	: pp/s
-	(until) the base is set
+                     (until) a breadcrumb sizzles 	: pp/s
+	                   (until) the base is set
 
 
 
@@ -8209,21 +8089,42 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="until"  />
     <member stem="to"  />
   </family>
-
-
-
-
-
-
+  <!-- ==============================================================================
+    TODO: Is it used?
+    family name:     pron.interrogative.inv.loc
+    pos:             PRON
+    Entry "primary" : s/*np/*(s\*np/*pp)
+    description:     Inverted question pronoun: where
+    Example Member:  where
+    Example Parse:   (where) is his office?
+    ============================================================================ -->
+  <family pos="Q.where" name="pron.interrogative.inv.loc">
+    <entry name="primary">
+      <atomcat type="q.where">
+        <fs id="1">
+          <feat attr="index">
+            <lf>
+              <nomvar name="GL" />
+            </lf>
+          </feat>
+        </fs>
+        <lf>
+          <satop nomvar="GL:gs-GeneralizedLocation">
+            <prop name="[*DEFAULT*]" />
+          </satop>
+        </lf>
+      </atomcat>
+    </entry>
+  </family>
   <!-- ==============================================================================
     family name:     pron.interrogative.loc
     pos:             PRON
     Entry "primary" : s/*(s/*pp)
     description:     interrogative pronoun: where
-    Example Memeber: where
-    Example Parse:   (where) is shis office? (04.11.18 not working)
+    Example Member:  where
+    Example Parse:   (where) is his office?
     ============================================================================ -->
-  <family closed="true" pos="PRON" name="pron.interrogative.loc">
+  <family pos="Q.where" name="pron.interrogative.loc">
     <entry name="primary">
       <complexcat>
         <atomcat type="s">
@@ -8343,7 +8244,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     -cooking domain (03.11.18) in progress-
     a large saucepan (of) water  np/*np  			not parsing
     ============================================================================ -->
-  <family pos="PREP.genetive" name="prep.genetive.spatial" indexRel="*NoSem*" closed="true"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="PREP.genetive" name="prep.genetive.spatial" indexRel="*NoSem*">
     <entry name="primary">
       <complexcat>
         <atomcat type="np">
@@ -8509,15 +8410,15 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     Family name:     NP.possessive.normal
     Pos:             NP.possessive
-    Description:     genetive construction of proper nouns (noun phrases)
-    We have to treat two different entries. In one entry the posession
-    is simple and corresponds to a traditional semantics approach.
-    In the other case we are working with abstract spatial relations,
-    regions and must use a different mechanism for binding.
+    Description:     Genitive construction of proper nouns (noun phrases)
+                     We have to treat two different entries. In one entry the
+                     possession is simple and corresponds to a traditional semantics
+                     approach. In the other case we are working with abstract spatial
+                     relations, regions and must use a different mechanism for binding.
     Entry            "primary" :    np/*n
     Example Parse:   robert's cup
     ============================================================================ -->
-  <family pos="NP.possessive" name="NP.possessive.normal" indexRel="hasName" closed="true"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="NP.possessive" name="NP.possessive.normal" indexRel="hasName">
     <entry name="primary">
       <complexcat>
         <atomcat type="np">
@@ -8566,15 +8467,15 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     Family name:     NP.possessive.spatial
     Pos:             NP.possessive
-    Description:     genetive construction of proper nouns (noun phrases)
-    We have to treat two different entries. In one entry the posession
-    is simple and corresponds to a traditional semantics approach.
-    In the other case we are working with abstract spatial relations,
-    regions and must use a different mechanism for binding.
+    Description:     Genitive construction of proper nouns (noun phrases)
+                     We have to treat two different entries. In one entry the
+                     possession is simple and corresponds to a traditional semantics
+                     approach. In the other case we are working with abstract spatial
+                     relations, regions and must use a different mechanism for binding.
     Entry            spatial        :    np
     Example Parse:   (robert's) left
     ============================================================================ -->
-  <family pos="NP.possessive" name="NP.possessive.spatial" closed="true"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="NP.possessive" name="NP.possessive.spatial">
     <entry name="spatial">
       <atomcat type="np">
         <fs id="1">
@@ -8605,15 +8506,12 @@ Important manual modifications: (Marked below with   MOD: key   )
     pos:             DET
     Entry "primary": np/*n (DET is an entity looking for a noun 'n' on the right side in order to create a 'np')
     description:     Determiners
-    Example Memeber: a, the, this, roberts
+    Example Member:  a, the, this, roberts
     Example Parse:   a (room)
     Entry "secondary": np/*np
-    description:     Determniners, followed by numbers
+    description:     Determiners, followed by numbers
                        not handled properly yet (as this allows e.g. "the" followed by "a")
     Example Parse:   the two (boxcars)
-
-    -cooking domain-
-    this CAT allows any(?) adjectival modification of NPs and Ns
     ============================================================================ -->
   <family pos="DET" name="det" closed="true" indexRel="det">
     <entry name="primary">
@@ -8715,31 +8613,29 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="these" />
     <member stem="that" />
     <member stem="those" />
-
-    <member stem="frying" />
-    <member stem="vegetable" />
   </family>
   <!-- ==============================================================================
     family name:     possessives
     pos:             POSSDET
-    description:     Entry for posessive pronouns. Because of the strange semantics of
-    GeneralizedLocatings we must have two different entries for the
-    posessive pronouns.
-    The first, primary, entry is used for normal posessive relationships
-    and leads to the associated noun being linked to the posessor
-    via a standard ownership relation (configuration eventually).
-    The second, spatial, entry is used in conjunction with categories
-    for GeneralizedLocations to provide a relatum rather than an owner
-    for the generalized location.
+    description:     Entry for possessive pronouns. Because of the strange semantics
+                     of GeneralizedLocatings we must have two different entries for
+                     the possessive pronouns.
+                     The first, primary, entry is used for normal possessive
+                     relationships and leads to the associated noun being linked to
+                     the possessor via a standard ownership relation (configuration
+                     eventually).
+                     The second, spatial, entry is used in conjunction with categories
+                     for GeneralizedLocations to provide a relatum rather than an owner
+                     for the generalized location.
 
-    We will just do posessive pronouns in this family. Named posessors
-    are handld in a different family.
-    Entry            "ownership" : np/*n
-    "sptailrelating" : np/*n
+                     We will just do possessive pronouns in this family. Named possessors
+                     are handled in a different family.
+    Entry "ownership" : np/*n
+    "spatialrelating" : np/*n
     Example Parse:   his (room)  :- ownership
-    his (left)  :- spatial
+                     his (left)  :- spatial
     ============================================================================ -->
-  <family pos="POSSDET" name="possessives" closed="true"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="POSSDET" name="possessives">
     <entry name="ownership">
       <complexcat>
         <atomcat type="np">
@@ -8805,7 +8701,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     pos:             ADJ
     Entry "adj.property" : n/*n
     description:     Adjectival modifications with color
-    Example Memeber: red
+    Example Member:  red
     Example Parse:   the (red) room
     ============================================================================ -->
   <family pos="ADJ" closed="true" name="adj.color">
@@ -8867,16 +8763,9 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="black" />
     <member stem="brown" />
     <member stem="white" />
-
   </family>
-
-
-
-
-
   <!-- ==============================================================================
     NEW (added 03.11.18)
-    comment: redundant?
 
     family name:     adj_cook.attribut
     pos:             ADJ
@@ -8886,16 +8775,13 @@ Important manual modifications: (Marked below with   MOD: key   )
     until al dente : \prep
 
     description:     Adjectival modifications of NPs
-    Example Memeber: frying
+    Example Member:  frying
     Example Parse:   the (frying) pan
- 					 the (vegetable) oil
+ 					           the (vegetable) oil
  	============================================================================ -->
-
-
   <family pos="ADJ" closed="true" name="adj_cook.attribut">
     <entry name="adj.full">
       <complexcat>
-
        <atomcat type="n">
           <fs inheritsFrom="1">
             <feat attr="index">
@@ -8905,9 +8791,7 @@ Important manual modifications: (Marked below with   MOD: key   )
             </feat>
           </fs>
         </atomcat>
-
         <slash mode="*" dir="/" />
-
         <atomcat type="n">
             <fs id="1">
             <feat attr="num">
@@ -8926,7 +8810,6 @@ Important manual modifications: (Marked below with   MOD: key   )
             </feat>
           </fs>
         </atomcat>
-
         <lf>
           <satop nomvar="U:gum-SimpleQuality">
             <diamond mode="concrete">
@@ -8948,14 +8831,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     </entry>
     <member stem="frying" />
     <member stem="vegetable" />
-
-
   </family>
-
-
-
-
-
   <!-- ==============================================================================
     family name:     adj.spt
     pos:             ADJ.spt
@@ -8967,7 +8843,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     Example Parse:   (central) district
                      (central) London
     ============================================================================ -->
-  <family pos="ADJ.spt" closed="true" name="adj.spt"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="ADJ.spt" name="adj.spt">
     <entry name="primary">
       <complexcat>
         <atomcat type="n">
@@ -8993,7 +8869,7 @@ Important manual modifications: (Marked below with   MOD: key   )
             </feat>
             <feat attr="index">
               <lf>
-                <nomvar name="T:slm-DisjointThing" />
+                <nomvar name="T:glm-DisjointThing" />
               </lf>
             </feat>
           </fs>
@@ -9053,7 +8929,7 @@ Important manual modifications: (Marked below with   MOD: key   )
             </feat>
             <feat attr="index">
               <lf>
-                <nomvar name="T:slm-DisjointThing" />
+                <nomvar name="T:glm-DisjointThing" />
               </lf>
             </feat>
           </fs>
@@ -9127,7 +9003,6 @@ Important manual modifications: (Marked below with   MOD: key   )
       </complexcat>
     </entry>
   </family>
-
     <!-- ==============================================================================
     family name:     adj.size
     pos:             ADJ
@@ -9192,9 +9067,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="little" />
     <member stem="a_little" />
     <member stem="medium" />
-
   </family>
-
   <!-- ==============================================================================
     family name:     adj.number
     pos:             ADJ
@@ -9203,7 +9076,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     Example Parse:   the (second) cup
     TODO:            make sure that the configuration type is correct.
     ============================================================================ -->
-  <family pos="ADJ.ordinal" closed="true" name="adj.number"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="ADJ.ordinal" name="adj.number">
     <entry name="adj.property.config">
       <complexcat>
         <atomcat type="n">
@@ -9253,11 +9126,11 @@ Important manual modifications: (Marked below with   MOD: key   )
     pos:             ADV
     Entry "adv.modif" : adv/*adv
     description:     Modifiying adverbs (may cause adverbs effects, haha)
-    Dangerous. Must be followed up.
-    Example Memeber: around, forward
+                     Dangerous. Must be followed up.
+    Example Member:  around, forward
     Example Parse:   (drive forward) forward
     ============================================================================ -->
-  <family pos="ADV" closed="true" name="advadv"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="ADV" name="advadv">
     <entry name="adv.modif">
       <complexcat>
         <atomcat type="adv">
@@ -9287,10 +9160,10 @@ Important manual modifications: (Marked below with   MOD: key   )
     pos:             ADV
     Entry "primary" : adv
     description:     Simple Adverbs
-    Example Memeber: around, forward
+    Example Member:  around, forward
     Example Parse:   (drive) forward
     ============================================================================ -->
-  <family pos="ADV" name="adv" closed="true"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="ADV" name="adv">
     <entry name="adv">
       <atomcat type="adv">
         <fs id="3">
@@ -9338,10 +9211,10 @@ Important manual modifications: (Marked below with   MOD: key   )
     pos:             ADV
     Entry "primary" : pp/.pp
     description:
-    Example Memeber: around, behind
+    Example Member:  around, behind
     Example Parse:   UNCLEAR
     ============================================================================ -->
-  <family closed="true" pos="ADV" name="adv.ppmodif" indexRel="proximity"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="ADV" name="adv.ppmodif" indexRel="proximity">
     <entry name="primary">
       <complexcat>
         <atomcat type="pp">
@@ -9419,7 +9292,6 @@ Important manual modifications: (Marked below with   MOD: key   )
     </entry>
     <member stem="directly" />
   </family>
-
   <!-- ==============================================================================
     family name:     n
     pos:             N
@@ -9428,7 +9300,7 @@ Important manual modifications: (Marked below with   MOD: key   )
                      the routes grammar.
     Example Parse:   (go to the) room
     ============================================================================ -->
-  <family name="Num" pos="Num" closed="true"> <!-- MOD: CLOSED=TRUE -->
+  <family name="Num" pos="Num">
     <entry name="Primary">
       <atomcat type="num">
         <fs id="2">
@@ -9485,10 +9357,10 @@ Important manual modifications: (Marked below with   MOD: key   )
     pos:             N
     Entry "default": n
     description:     Ordinary everyday nouns.
-    Example Memeber: room
+    Example Member:  room
     Example Parse:   (go to the) room
     ============================================================================ -->
-  <family pos="N" name="n" closed="true"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="N" name="n">
     <entry name="primary">
       <atomcat type="n">
         <fs id="1">
@@ -9563,7 +9435,6 @@ Important manual modifications: (Marked below with   MOD: key   )
         </complexcat>
     </entry>
   </family>
-
     <!-- ==============================================================================
     family name:     nomp.nominalised.process
     pos:             NOMP
@@ -9571,12 +9442,12 @@ Important manual modifications: (Marked below with   MOD: key   )
     description:     used to specify nominalised processes.
     Entries:         nonaffecting-pp: nomp>\np>/pp
                      nonaffecting-np: nomp.\np
-    Example Memeber: turn
+    Example Member:  turn
     Example Parse:   (make a) turn
                      (make a 360 degree) turn
-    TODO - robertr - Look into the second cateogry.
+    TODO - robertr - Look into the second category.
     ============================================================================ -->
-  <family pos="NOMP" name="nomp" closed="true"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="NOMP" name="nomp">
     <entry name="nonaffecting-pp">
       <complexcat>
         <atomcat type="nomp">
@@ -9684,24 +9555,24 @@ Important manual modifications: (Marked below with   MOD: key   )
     </entry>
     <member stem="turn" />
   </family>
-
   <!-- ==============================================================================
     family name:     nq.qualitative.unit
     pos:             NQ
     Entry "default": nq
-    description:     similar function as nomp-family. Used to specify qualitative units (without value),
-                     which can similarly be used within a orientation change process, as well as a unit.
-    Note:            robertr - this is a total mess. I won't check the origins but this needs to be
-                     removed quickly.
+    description:     Similar function as nomp-family. Used to specify qualitative units
+                     (without value), which can similarly be used within a orientation
+                     change process, as well as a unit.
+    Note:            robertr - this is a total mess. I won't check the origins but this
+                     needs to be removed quickly.
     Entries:         nonaffecting-pp: nq>\np>/pp
                      nonaffecting-np: nq.\np
                      unit: nq\*np
-    Example Memeber: semicircle
+    Example Member:  semicircle
     Example Parse:   (make a) semicircle to the lef
                      (make a) step to the right
                      one semicircle
 ============================================================================ -->
-  <family pos="NQ" name="nq" closed="true"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="NQ" name="nq">
     <entry name="nonaffecting-pp">
       <complexcat>
         <atomcat type="nq">
@@ -9816,10 +9687,10 @@ Important manual modifications: (Marked below with   MOD: key   )
         </atomcat>
         <lf>
           <satop nomvar="Z:gs-QuantitativeSpatialTemporal">
-            <diamond mode="slm-value">
+            <diamond mode="glm-value">
               <nomvar name="Y" />
             </diamond>
-            <diamond mode="slm-unit">
+            <diamond mode="glm-unit">
               <nomvar name="X" />
               <prop name="[*DEFAULT*]" />
             </diamond>
@@ -9829,16 +9700,15 @@ Important manual modifications: (Marked below with   MOD: key   )
     </entry>
     <member stem="semicircle" />
   </family>
-
    <!-- ==============================================================================
     family name:     n.pos
     pos:             N
     Entry "default": n
-    description:     Nouns in the posessive case
-    Example Memeber: lamp's, table's
+    description:     Nouns in the possessive case
+    Example Member:  lamp's, table's
     Example Parse:   the (lamp's) left
     ============================================================================ -->
-  <family pos="N.possessive" name="n.pos" closed="true"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="N.possessive" name="n.pos">
     <entry name="primary">
       <atomcat type="n">
         <fs id="1">
@@ -9870,8 +9740,8 @@ Important manual modifications: (Marked below with   MOD: key   )
     Entry            "primary": n.spatial
                      "posessive": np\.np_genetive
                      "posessive2": np/.np_genetive
-    TODO:            replace pn with something about the genetive construction
-    description:     Nominalizd directions.
+    TODO:            replace pn with something about the genitive construction
+    description:     Nominalised directions.
 
     Nominalised directions lead to the creation of GeneralizedLocations
     in the GUM semantics. Thus, nominalised directions are treated very
@@ -9901,17 +9771,17 @@ Important manual modifications: (Marked below with   MOD: key   )
     "north of the village"
     As with the second family the semantics produced is a GeneralizedLocation
     and the resultant category is a np.
-    Example Memeber: left, front, top, north
-    Example Parse:   go to the (north)
+    Example Member: left, front, top, north
+    Example Parse: go to the (north)
 
     the (right)
     the (left)
     roberts (left)
     roberts (right)
     the (right) of the cup
-    the (north) of the vilage
+    the (north) of the village
     ============================================================================ -->
-  <family closed="true" pos="NDIR" name="ndir"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="NDIR" name="ndir">
     <entry name="primary">
       <atomcat type="n-spatial">
         <fs id="1">
@@ -10218,7 +10088,7 @@ Important manual modifications: (Marked below with   MOD: key   )
               <diamond mode="gs-hasSpatialModality">
                 <nomvar name="M" />
                 <prop name="[*DEFAULT*]" />
-                <diamond mode="gum-hasQuantiativeExtent">
+                <diamond mode="gum-hasQuantitativeExtent">
                   <nomvar name="G2" />
                 </diamond>
               </diamond>
@@ -10228,16 +10098,15 @@ Important manual modifications: (Marked below with   MOD: key   )
       </complexcat>
     </entry>
   </family>
-
   <!-- ==============================================================================
     family name:     ndir.modifiable
     pos:             NDIR2
     Entry "default": n
-    description:     left and right directions as nouns
-    Example Memeber: left, right
+    description:     Left and right directions as nouns
+    Example Member:  left, right
     Example Parse:   (go to the) left
     ============================================================================ -->
-  <family closed="true" pos="NDIR2" name="ndir.modifiable"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="NDIR2" name="ndir.modifiable">
     <entry name="default">
       <atomcat type="n">
         <fs id="1">
@@ -10269,8 +10138,8 @@ Important manual modifications: (Marked below with   MOD: key   )
     family name:     dir.modifier
     pos:             DIRMODIF
     Entry "default" : n/*n
-    description:  modification of directions
-    Example Memeber: front,back
+    description:     Dodification of directions
+    Example Member:  front,back
     Example Parse:   UNCLEAR
     ============================================================================
     <family closed="true" pos="DIRMODIF" name="dir.modifier">
@@ -10316,11 +10185,11 @@ Important manual modifications: (Marked below with   MOD: key   )
     family name:     npdir
     pos:             NPDIR
     Entry "default" : np
-    description:     directional noun phrases, only entry: front
-    Example Memeber: front
+    description:     Directional noun phrases, only entry: front
+    Example Member:  front
     Example Parse:   (go to) front    (strnage entry)
     ============================================================================ -->
-  <family closed="true" pos="NPDIR" name="npdir"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="NPDIR" name="npdir">
     <entry name="default">
       <atomcat type="np">
         <fs id="1">
@@ -10355,17 +10224,16 @@ Important manual modifications: (Marked below with   MOD: key   )
     </entry>
     <member stem="npdir" />
   </family>
-
   <!-- ==============================================================================
     family name:     n.way.destinative
     pos:             NWAY
     Entry "n.way.destinative" : n/.pp
-    description:   nouns taking a destination, such as "way"
-    Example Memeber: route, turn
+    description:     Nouns taking a destination, such as "way"
+    Example Member:  route, way
     Example Parse:   way (to the kitchen)
     TODO - robertr - Work out a proper model for these semantics.
     ============================================================================ -->
-  <family closed="true" pos="NWAY" name="n.way.destinative"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="NWAY" name="n.way.destinative">
     <entry name="n.way.destinative">
       <complexcat>
         <atomcat type="n">
@@ -10406,21 +10274,18 @@ Important manual modifications: (Marked below with   MOD: key   )
         </lf>
       </complexcat>
     </entry>
-    <member stem="way" />
-    <member stem="turn" />
   </family>
-
   <!-- ==============================================================================
     family name:     np
     pos:             NP
     Entry "default" : np
     description:     single-worded NPs, insatntiated by personal pronouns or
     demonstrative terms,
-    Example Memeber: I,he,this,those,that
+    Example Member:  I,he,this,those,that
     Example Parse:   (he) is going to the kitchen
-    (this) is the kitchen
+                     (this) is the kitchen
     ============================================================================ -->
-  <family pos="NP" name="np" closed="true"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="NP" name="np">
     <entry name="default">
       <atomcat type="np">
         <fs id="1">
@@ -10439,17 +10304,15 @@ Important manual modifications: (Marked below with   MOD: key   )
       </atomcat>
     </entry>
   </family>
-
-
   <!-- ==============================================================================
     family name:     np.composite
     pos:             NP
     Entry            "default" : np
-    description:     single-worded NPs which can be constructed into locations.
-    Example Memeber: Dublin, London etc.
+    description:     Single-worded NPs which can be constructed into locations.
+    Example Member:  Dublin, London etc.
     Example Parse:   Dublin Ireland
     ============================================================================ -->
-  <family pos="NP" name="np.composite" closed="true"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="NP" name="np.composite">
     <entry name="default">
       <complexcat>
         <atomcat type="np">
@@ -10492,20 +10355,18 @@ Important manual modifications: (Marked below with   MOD: key   )
      </complexcat>
     </entry>
   </family>
-
-
   <!-- ==============================================================================
     family name:     gen_time
     pos:             PREP.temporal
-    description:     category for generalised time construction
+    description:     Category for generalised time construction
     Entries:         primary              : pp/*np
     circumstance-fwd     : s/*s
     circumstance-bwd     : s/*s
     Example Parse:   (at) three o'clock
-    at five o'clock they went to the shop
-    they went to the shop at five o'clock
+                     at five o'clock they went to the shop
+                     they went to the shop at five o'clock
     ============================================================================ -->
-  <family closed="true" pos="PREP.temporal" name="gen_time"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="PREP.temporal" name="gen_time">
     <entry name="primary">
       <complexcat>
         <atomcat type="pp">
@@ -10639,11 +10500,11 @@ Important manual modifications: (Marked below with   MOD: key   )
     family name:     time
     pos:             n.time
     Entry "default" : np
-    description:     category for explict time construction.
-    Example Memeber: o'clock
+    description:     Category for explicit time construction.
+    Example Member:  o'clock
     Example Parse:   at three (o'clock)
     ============================================================================ -->
-  <family closed="true" pos="N.time" name="time"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="N.time" name="time">
     <entry name="primary">
       <complexcat>
         <atomcat type="np">
@@ -10680,7 +10541,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     </entry>
   </family>
 
-  <family closed="true" pos="ADJ.cert" name="certanty"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="ADV.cert" name="certainty">
     <entry name="primary">
       <atomcat type="adv.c">
         <fs>
@@ -10698,18 +10559,17 @@ Important manual modifications: (Marked below with   MOD: key   )
       </atomcat>
     </entry>
     </family>
-
         <!-- ==============================================================================
     family name:     number
     pos:             N.num
     Entry "default": np
-    description:     category for number composition
-                     category for numeral assignments/ naming
+    description:     Category for number composition
+                     Category for numeral assignments/ naming
     Example Member:  one, two, three
     Example Parse:   at (three) o'clock
                      engine two
     ============================================================================ -->
-  <family closed="true" pos="N.num" name="number"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="N.num" name="number">
     <!-- atomic cateogry for raw numbers -->
     <!-- this is used later in other cateogires to construct semantics for "two o'clock" or "two miles" -->
     <entry name="primary">
@@ -10828,11 +10688,10 @@ Important manual modifications: (Marked below with   MOD: key   )
       </complexcat>
     </entry>
   </family>
-
   <!-- ==============================================================================
     family name:     distance_quantitative
     pos:             N
-    description:     category for explict quantitative distance construction
+    description:     Category for explicit quantitative distance construction
     Entries:         primary: q\*np
                      secondary : pp\*pp\*np
     Example Parse:   three (meters)
@@ -10863,10 +10722,10 @@ Important manual modifications: (Marked below with   MOD: key   )
         </atomcat>
         <lf>
           <satop nomvar="Z:gs-QuantitativeSpatialTemporal">
-            <diamond mode="slm-value">
+            <diamond mode="glm-value">
               <nomvar name="Y" />
             </diamond>
-            <diamond mode="slm-unit">
+            <diamond mode="glm-unit">
               <nomvar name="X" />
               <prop name="[*DEFAULT*]" />
             </diamond>
@@ -10889,7 +10748,7 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     family name:     distance_quantitative2
     pos:             N
-    description:     category for explict quantitative distance construction
+    description:     Category for explicit quantitative distance construction
     Entries:         primary: q\*np
                      secondary: pp\*pp\*np
                      tertiary: q\*s
@@ -10943,10 +10802,10 @@ Important manual modifications: (Marked below with   MOD: key   )
           <satop nomvar="SM">
             <diamond mode="gs-quantitativeDistanceExtent">
               <nomvar name="Z:gs-QuantitativeSpatialTemporal" />
-              <diamond mode="slm-value">
+              <diamond mode="glm-value">
                 <nomvar name="Y" />
               </diamond>
-              <diamond mode="slm-unit">
+              <diamond mode="glm-unit">
                 <nomvar name="X" />
                 <prop name="[*DEFAULT*]" />
               </diamond>
@@ -10990,10 +10849,10 @@ Important manual modifications: (Marked below with   MOD: key   )
           <satop nomvar="SM">
             <diamond mode="gs-quantitativeDistanceExtent">
               <nomvar name="Z:gs-QuantitativeSpatialTemporal" />
-              <diamond mode="slm-value">
+              <diamond mode="glm-value">
                 <nomvar name="Y" />
               </diamond>
-              <diamond mode="slm-unit">
+              <diamond mode="glm-unit">
                 <nomvar name="X" />
                 <prop name="[*DEFAULT*]" />
               </diamond>
@@ -11013,9 +10872,6 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="centimetre" />
     <member stem="roomLength" />
   </family>
-
-
-
   <!-- ==============================================================================
     Family name:     distance_quantitative2
     Pos:             N
@@ -11023,7 +10879,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     DELETE THIS ONE i THINK
 
 
-    Description:     category for explict quantitative distance construction
+    Description:     Category for explict quantitative distance construction
     Entries:         primary : pp\*pp\*np
     Example Parse:   (far away) from here
     ============================================================================ -->
@@ -11073,10 +10929,10 @@ Important manual modifications: (Marked below with   MOD: key   )
           <satop nomvar="SM">
             <diamond mode="gs-quantitativeDistanceExtent">
               <nomvar name="Z:gs-QuantitativeSpatialTemporal" />
-              <diamond mode="slm-value">
+              <diamond mode="glm-value">
                 <nomvar name="Y" />
               </diamond>
-              <diamond mode="slm-unit">
+              <diamond mode="glm-unit">
                 <nomvar name="X" />
                 <prop name="[*DEFAULT*]" />
               </diamond>
@@ -11094,18 +10950,16 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="step" />
     <member stem="centimetre" />
   </family>
-
-
   <!-- ==============================================================================
     Family name:     qualitative-extent
     Pos:             ADJ
     Description:
     Entries:         pp/*pp
     Example Parse:   (deep) in the water
-    (deepest) in the water
-    very (deep) within the forest
-    (high) above the ground
-    (far) above the ground
+                     (deepest) in the water
+                     very (deep) within the forest
+                     (high) above the ground
+                     (far) above the ground
     ============================================================================ -->
   <family closed="true" pos="ADJ" name="qualitative-extent" indexRel="gs-qualitativeDistanceExtent">
     <entry name="primary">
@@ -11192,23 +11046,19 @@ Important manual modifications: (Marked below with   MOD: key   )
     </entry>
     <member stem="deep" />
   </family>
-
   <!-- ==============================================================================
     Family name:     qualitative-extent
     Pos:             ADJ
     Description:
     Entries:         pp/*pp
-    Example Parse:   (deep) in the water
-    (deepest) in the water
-    very (deep) within the forest
-    (high) above the ground
-    (far) above the ground
+    Example Parse:   (a_little) above the ground
+                     (half_way) through the tunnel
 
 
     -cooking domain (03.11.18)-
     Heat (a_little) of the oil
     ============================================================================ -->
-  <family closed="true" pos="QUAL-EXT" name="qualitative-extent2" indexRel="gs-qualitativeDistanceExtent"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="QUAL-EXT" name="qualitative-extent2" indexRel="gs-qualitativeDistanceExtent">
     <entry name="primary">
       <complexcat>
         <atomcat type="pp">
@@ -11339,7 +11189,6 @@ Important manual modifications: (Marked below with   MOD: key   )
       </complexcat>
     </entry>
   </family>
-
   <!-- ==============================================================================
     family name:     Q.particle
     pos:             Q.particle
@@ -11360,13 +11209,13 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     family name:     COORD.pp.route
     pos:             COORD
-    description:     construct path structures from segment elements which are conjoined
-    explicitly with conjunctive tersm.
+    description:     Construct path structures from segment elements which are conjoined
+                     explicitly with conjunctive tersm.
     Entries:         "basic" : pp/*pp\*pp
     "route" : r/*pp\*pp
     Example Parse:   along the wall and across the field
-    along the wall and then across the field
-    along the wall then across the field
+                     along the wall and then across the field
+                     along the wall then across the field
     ============================================================================ -->
   <family closed="true" pos="COORD" name="COORD.pp.route">
     <entry name="basic">
@@ -11461,8 +11310,8 @@ Important manual modifications: (Marked below with   MOD: key   )
     family name:     COORD.conj.pl
     pos:             COORD
     Entry "extendable" : np\*np/*np
-    description:     coordinating noun phrases
-    Example Memeber: and,or,then
+    description:     Coordinating noun phrases
+    Example Member:  and,or,then
     Example Parse:   the elevator and the kitchen
     ============================================================================ -->
   <family closed="true" pos="COORD" name="COORD.conj">
@@ -11523,12 +11372,12 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     family name:     COORD.s.imp
     pos:             COORD
-    description:     coordinating clauses
+    description:     Coordinating clauses
     Entry "primary"   : s\*s/*s
-    Example Memeber: and, or, then
+    Example Member:  and, or, then
     Example Parse:   go forward and stop
     ============================================================================ -->
-  <family pos="C-COORD" name="COORD.s.imp" closed="true"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="C-COORD" name="COORD.s.imp">
     <entry name="primary">
       <complexcat>
         <atomcat type="s">
@@ -11670,11 +11519,11 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     family name:     COORD.conj.pp
     pos:             COORD
-    description:     coordinating prepositional terms
+    description:     Coordinating prepositional terms
     Entry "primary"   : pp\*pp/*pp
     "secondary" : np\*np\*(np\*np)/*(np\*np)
     "tertiary"  : pp/*np\*(pp/*np)/*(pp/*np)
-    Example Memeber: and, or, then
+    Example Member:  and, or, then
     Example Parse:   over then under
     ============================================================================ -->
   <family closed="true" pos="COORD" name="COORD.conj.pp">
@@ -11894,9 +11743,9 @@ Important manual modifications: (Marked below with   MOD: key   )
   <!-- ==============================================================================
     family name:     COORD.conj.adv
     pos:             COORD
-    description:     coordinating adverbial terms
+    description:     Coordinating adverbial terms
     Entry "primary": adv\*adv/*adv
-    Example Memeber: and, or, then
+    Example Member:  and, or, then
     Example Parse:   forward and backwards
     ============================================================================ -->
   <family closed="true" pos="COORD" name="COORD.conj.adv">
@@ -11964,17 +11813,16 @@ Important manual modifications: (Marked below with   MOD: key   )
     <member stem="then" />
     <member stem="," />
   </family>
-
   <!-- ==============================================================================
     family name:     particle
     pos:             PARTICLE
-    description:     speech act indicating discourse particle
+    description:     Speech act indicating discourse particle
     Entry "primary": s/.s
     Entry "backwards": s\*s
-    Example Memeber: yes,no,ok
+    Example Member:  yes,no,ok
     Example Parse:   yes
     ============================================================================ -->
-  <family closed="true" pos="PARTICLE" name="particle"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="PARTICLE" name="particle">
     <entry name="primary">
       <atomcat type="s">
         <fs id="1">
@@ -11998,17 +11846,16 @@ Important manual modifications: (Marked below with   MOD: key   )
       </atomcat>
     </entry>
   </family>
-
   <!-- ==============================================================================
     family name:     dconn
     pos:             DCONN
-    description:     propositionally empty discourse units
+    description:     Propositionally empty discourse units
     Entry "primary": s/.s
     Entry "backwards": s\*s
-    Example Memeber: yes,no,please,rolland
+    Example Member:  yes,no,please,rolland
     Example Parse:   yes
     ============================================================================ -->
-  <family closed="true" pos="DCONN" name="dconn"> <!-- MOD: CLOSED=TRUE -->
+  <family pos="DCONN" name="dconn">
     <entry name="primary">
       <complexcat>
         <atomcat type="smain">
@@ -12096,7 +11943,7 @@ Important manual modifications: (Marked below with   MOD: key   )
     Entry            primary: s\.s
                      GUMThing(polarity(negative))
                      auxilaries: s\.s/.s
-    Example Memeber: not
+    Example Member:  not
     Example Parse    I don't know any lab
                      "we are not" will parse but incorporating into a complete
                      construction is more difficult.

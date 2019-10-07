@@ -1,0 +1,462 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="linf" IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">linguistic features for the CCG diaspace-grammar (http://www.diaspace.uni-bremen.de/cgi-bin/twiki/view/DiaSpace/ReSources.html)</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#YesNoQuestion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#full"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#NotInf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#nom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#acc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#N"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#RealizationClassName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Polarities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#NPNonDir"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#aux"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Segment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#positive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#negative"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#imp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Source"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#indefinite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#pos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Cases"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#gen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPNonDir"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPAdd"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#definite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#OrdinalNumber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#ModIfDir"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#dynamic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Goal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Defness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#ind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Dir"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPNonGoal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#static"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#non-gen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Number"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Loc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Adv"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Spatial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#ing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#sg"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#takable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#linguistic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#obsolete"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPKinds"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#NPKinds"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#dat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#S"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#temporal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Verbs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#NatNum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Front"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Simple"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#of"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Landmark"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Root"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Moods"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#pl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#ContinuousForm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Cats"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PP"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Inf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#NP"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Adv"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Cats"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Cases"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#linguistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Cats"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#linguistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#ContinuousForm"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#RealizationClassName"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Defness"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#linguistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Dir"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#NPKinds"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Dir"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPNonGoal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Front"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Dir"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Goal"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPNonDir"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Inf"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#linguistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Landmark"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPNonDir"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Loc"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPNonDir"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Loc"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPNonGoal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#ModIfDir"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPNonGoal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Moods"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#linguistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#N"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Cats"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#NP"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Cats"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#NPKinds"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#linguistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#NPNonDir"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#NPKinds"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#NatNum"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Root"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#NotInf"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#linguistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Number"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#linguistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#OrdinalNumber"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#RealizationClassName"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PP"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Cats"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPAdd"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPKinds"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPKinds"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#linguistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPNonDir"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPKinds"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPNonGoal"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPKinds"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPTime"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPKinds"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Person"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#NPNonDir"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Polarities"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Root"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#RealizationClassName"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#linguistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#S"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Cats"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Segment"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPNonDir"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Simple"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#NPNonDir"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Source"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#PPNonDir"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Spatial"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Simple"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Verbs"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#linguistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#YesNoQuestion"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#RealizationClassName"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#acc"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Cases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#aux"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Verbs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#dat"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Cases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#definite"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Defness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#dynamic"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#linguistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#full"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Verbs"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#gen"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Cases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#imp"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Moods"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#ind"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Moods"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#indefinite"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Defness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#ing"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Moods"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#linguistic"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Root"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#negative"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Polarities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#nom"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Cases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#non-gen"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Cases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#obsolete"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#linguistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#of"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#linguistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#pl"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#pos"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Cases"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#positive"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Polarities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#sg"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#static"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#linguistic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#takable"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#Spatial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#temporal"/>
+        <Class IRI="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/linguistic-features.owl#linguistic"/>
+    </SubClassOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

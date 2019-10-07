@@ -72,12 +72,12 @@ Licence:     This file is free software; you can redistribute it and/or modify
   <type name="gs-PathRepresentingExternal" parents="gs-SpatialDistanceModality gs-PathRepresenting" />
   <type name="gs-Surrounding" parents="gs-Access gs-ShapeCommitting" />
   <type name="gs-Distribution" parents="gs-RelativeSpatialModality" />
-  <type name="slm-Among" parents="gs-Distribution" />
-  <type name="slm-Between" parents="gs-Distribution" />
+  <type name="glm-Among" parents="gs-Distribution" />
+  <type name="glm-Between" parents="gs-Distribution" />
   <type name="gs-Disjointness" parents="gs-RelativeSpatialModality" />
   <type name="gs-Sequential" parents="gs-Disjointness gs-Containment" />
-  <type name="slm-Succession" parents="gs-Sequential"/>
-  <type name="slm-Precedence" parents="gs-Sequential"/>
+  <type name="glm-Succession" parents="gs-Sequential"/>
+  <type name="glm-Precedence" parents="gs-Sequential"/>
   <type name="gs-NonProjectionAxial" parents="gs-SpatialDistanceModality gs-Disjointness" />
   <type name="gum-Height-NonProjectionAxial" parents="gs-NonProjectionAxial" />
   <type name="gs-RelativeNonProjectionAxial" parents="gs-NonProjectionAxial" />
@@ -116,117 +116,117 @@ Licence:     This file is free software; you can redistribute it and/or modify
   <type name="gum-DiffuseMatter" parents="gum-SubjectMatter" />
   <type name="gum-NewTimePoint" parents="gum-Element" />
   <type name="gum-Event" parents="gum-Element" />
-  <type name="slm-Meeting" parents="gum-Event" />
-  <type name="slm-Party" parents="gum-Event" />
+  <type name="glm-Meeting" parents="gum-Event" />
+  <type name="glm-Party" parents="gum-Event" />
   <type name="gs-QualitativeSpatialTemporal" parents="gum-Element" />
-  <type name="slm-HugeExtent" parents="gs-QualitativeSpatialTemporal"/>
-  <type name="slm-LargeExtent" parents="gs-QualitativeSpatialTemporal"/>
-  <type name="slm-MediumExtent" parents="gs-QualitativeSpatialTemporal"/>
-  <type name="slm-SmallExtent" parents="gs-QualitativeSpatialTemporal"/>
-  <type name="slm-TinyExtent" parents="gs-QualitativeSpatialTemporal"/>
+  <type name="glm-HugeExtent" parents="gs-QualitativeSpatialTemporal"/>
+  <type name="glm-LargeExtent" parents="gs-QualitativeSpatialTemporal"/>
+  <type name="glm-MediumExtent" parents="gs-QualitativeSpatialTemporal"/>
+  <type name="glm-SmallExtent" parents="gs-QualitativeSpatialTemporal"/>
+  <type name="glm-TinyExtent" parents="gs-QualitativeSpatialTemporal"/>
 
-  <type name="slm-Below" parents="gs-QualitativeSpatialTemporal" /><!-- Deep -->
+  <type name="glm-Below" parents="gs-QualitativeSpatialTemporal" /><!-- Deep -->
   <type name="gs-QuantitativeSpatialTemporal" parents="gum-Element" />
 
-  <type name="slm-DisjointThing" parents="gum-Element" />
-  <type name="slm-CertantyEval" parents="gum-Element" />
-  <type name="slm-Approx" parents="slm-CertantyEval" />
-  <type name="slm-Exact" parents="slm-CertantyEval" />
-  <type name="slm-District" parents="slm-DisjointThing" />
+  <type name="glm-DisjointThing" parents="gum-Element" />
+  <type name="glm-CertaintyEval" parents="gum-Element" />
+  <type name="glm-Approx" parents="glm-CertaintyEval" />
+  <type name="glm-Exact" parents="glm-CertaintyEval" />
+  <type name="glm-District" parents="glm-DisjointThing" />
 
   <type name="gum-SimpleThing" parents="gum-Element" />
-  <type name="slm-Metre" parents="gum-SimpleThing" />
-  <type name="slm-Mile" parents="gum-SimpleThing" />
-  <type name="slm-Inch" parents="gum-SimpleThing" />
-  <type name="slm-Bit" parents="gum-SimpleThing" />
-  <type name="slm-SemiCircle" parents="gum-SimpleThing" />
-  <type name="slm-Degree" parents="gum-SimpleThing" />
-  <type name="slm-Foot" parents="gum-SimpleThing" />
-  <type name="slm-RoomLength" parents="gum-SimpleThing" />
-  <type name="slm-Step" parents="gum-SimpleThing" />
-  <type name="slm-Turn" parents="gum-SimpleThing"/>
-  <type name="slm-Centimeter" parents="gum-SimpleThing" />
-  <type name="slm-Bag" parents="gum-NonDecomposableObject" />
-  <type name="slm-Grass" parents="gum-NonDecomposableObject" />
-  <type name="slm-Sock" parents="gum-NonDecomposableObject" />
-  <type name="slm-CorridorEnd" parents="gum-NonDecomposableObject" />
-  <type name="slm-Guard" parents="gum-NonDecomposableObject" />
-  <type name="slm-Target" parents="gum-NonDecomposableObject" />
-  <type name="slm-Flour" parents="gum-NonDecomposableObject" />
-  <type name="slm-Deer" parents="gum-NonDecomposableObject" />
-  <type name="slm-Fish" parents="gum-NonDecomposableObject" />
-  <type name="slm-Dog" parents="gum-NonDecomposableObject" />
-  <type name="slm-Cat" parents="gum-NonDecomposableObject" />
-  <type name="slm-Gold" parents="gum-NonDecomposableObject" />
-  <type name="slm-Flock" parents="gum-NonDecomposableObject" />
-  <type name="slm-Drawer" parents="gum-NonDecomposableObject" />
-  <type name="slm-Shelf" parents="gum-NonDecomposableObject" />
-  <type name="slm-Wire" parents="gum-NonDecomposableObject" />
-  <type name="slm-Garden" parents="gum-NonDecomposableObject" />
-  <type name="slm-Halo" parents="gum-NonDecomposableObject" />
-  <type name="slm-Pluto" parents="gum-NonDecomposableObject" />
-  <type name="slm-Train" parents="gum-NonDecomposableObject" />
-  <type name="slm-Class_1" parents="gum-NonDecomposableObject" />
-  <type name="slm-Flower" parents="gum-NonDecomposableObject" />
-  <type name="slm-Group" parents="gum-DecomposableObject" />
-  <type name="slm-Engine" parents="gum-SimpleThing" />
-  <type name="slm-Crowd" parents="gum-DecomposableObject" />
-  <type name="slm-Seed" parents="gum-NonDecomposableObject" />
-  <type name="slm-Rug" parents="gum-NonDecomposableObject" />
-  <type name="slm-Freeway" parents="gum-NonDecomposableObject" />
-  <type name="slm-Base" parents="gum-NonDecomposableObject" />
-  <type name="slm-Mountain" parents="gum-NonDecomposableObject" />
-  <type name="slm-Barnacle" parents="gum-NonDecomposableObject" />
-  <type name="slm-Hat" parents="gum-NonDecomposableObject" />
-  <type name="slm-Hut" parents="gum-NonDecomposableObject" />
+  <type name="glm-Metre" parents="gum-SimpleThing" />
+  <type name="glm-Mile" parents="gum-SimpleThing" />
+  <type name="glm-Inch" parents="gum-SimpleThing" />
+  <type name="glm-Bit" parents="gum-SimpleThing" />
+  <type name="glm-SemiCircle" parents="gum-SimpleThing" />
+  <type name="glm-Degree" parents="gum-SimpleThing" />
+  <type name="glm-Foot" parents="gum-SimpleThing" />
+  <type name="glm-RoomLength" parents="gum-SimpleThing" />
+  <type name="glm-Step" parents="gum-SimpleThing" />
+  <type name="glm-Turn" parents="gum-SimpleThing"/>
+  <type name="glm-Centimeter" parents="gum-SimpleThing" />
+  <type name="glm-Bag" parents="gum-NonDecomposableObject" />
+  <type name="glm-Grass" parents="gum-NonDecomposableObject" />
+  <type name="glm-Sock" parents="gum-NonDecomposableObject" />
+  <type name="glm-CorridorEnd" parents="gum-NonDecomposableObject" />
+  <type name="glm-Guard" parents="gum-NonDecomposableObject" />
+  <type name="glm-Target" parents="gum-NonDecomposableObject" />
+  <type name="glm-Flour" parents="gum-NonDecomposableObject" />
+  <type name="glm-Deer" parents="gum-NonDecomposableObject" />
+  <type name="glm-Fish" parents="gum-NonDecomposableObject" />
+  <type name="glm-Dog" parents="gum-NonDecomposableObject" />
+  <type name="glm-Cat" parents="gum-NonDecomposableObject" />
+  <type name="glm-Gold" parents="gum-NonDecomposableObject" />
+  <type name="glm-Flock" parents="gum-NonDecomposableObject" />
+  <type name="glm-Drawer" parents="gum-NonDecomposableObject" />
+  <type name="glm-Shelf" parents="gum-NonDecomposableObject" />
+  <type name="glm-Wire" parents="gum-NonDecomposableObject" />
+  <type name="glm-Garden" parents="gum-NonDecomposableObject" />
+  <type name="glm-Halo" parents="gum-NonDecomposableObject" />
+  <type name="glm-Pluto" parents="gum-NonDecomposableObject" />
+  <type name="glm-Train" parents="gum-NonDecomposableObject" />
+  <type name="glm-Class_1" parents="gum-NonDecomposableObject" />
+  <type name="glm-Flower" parents="gum-NonDecomposableObject" />
+  <type name="glm-Group" parents="gum-DecomposableObject" />
+  <type name="glm-Engine" parents="gum-SimpleThing" />
+  <type name="glm-Crowd" parents="gum-DecomposableObject" />
+  <type name="glm-Seed" parents="gum-NonDecomposableObject" />
+  <type name="glm-Rug" parents="gum-NonDecomposableObject" />
+  <type name="glm-Freeway" parents="gum-NonDecomposableObject" />
+  <type name="glm-Base" parents="gum-NonDecomposableObject" />
+  <type name="glm-Mountain" parents="gum-NonDecomposableObject" />
+  <type name="glm-Barnacle" parents="gum-NonDecomposableObject" />
+  <type name="glm-Hat" parents="gum-NonDecomposableObject" />
+  <type name="glm-Hut" parents="gum-NonDecomposableObject" />
   <type name="gum-NamedObject" parents="gum-SimpleThing" />
-  <type name="slm-Australia" parents="gum-NamedObject" />
-  <type name="slm-NewYork" parents="gum-NamedObject" />
-  <type name="slm-London" parents="gum-NamedObject" />
-  <type name="slm-City" parents="gum-NamedObject" />
-  <type name="slm-Country" parents="gum-NamedObject" />
-  <type name="slm-Continuent" parents="gum-NamedObject" />
-  <type name="slm-Dublin" parents="slm-City" />
-  <type name="slm-Tirunelveli" parents="slm-City" />
-  <type name="slm-Ireland" parents="slm-Country" />
-  <type name="slm-Europe" parents="slm-Continuent" />
-  <type name="slm-Salzburg" parents="gum-NamedObject" />
-  <type name="slm-AustrianAlps" parents="gum-NamedObject" />
-  <type name="slm-Washington" parents="gum-NamedObject" />
-  <type name="slm-Bremen" parents="gum-NamedObject" />
+  <type name="glm-Australia" parents="gum-NamedObject" />
+  <type name="glm-NewYork" parents="gum-NamedObject" />
+  <type name="glm-London" parents="gum-NamedObject" />
+  <type name="glm-City" parents="gum-NamedObject" />
+  <type name="glm-Country" parents="gum-NamedObject" />
+  <type name="glm-Continent" parents="gum-NamedObject" />
+  <type name="glm-Dublin" parents="glm-City" />
+  <type name="glm-Tirunelveli" parents="glm-City" />
+  <type name="glm-Ireland" parents="glm-Country" />
+  <type name="glm-Europe" parents="glm-Continent" />
+  <type name="glm-Salzburg" parents="gum-NamedObject" />
+  <type name="glm-AustrianAlps" parents="gum-NamedObject" />
+  <type name="glm-Washington" parents="gum-NamedObject" />
+  <type name="glm-Bremen" parents="gum-NamedObject" />
   <type name="gum-ConsciousBeing" parents="gum-SimpleThing" />
   <type name="gum-Person" parents="gum-ConsciousBeing" />
   <type name="gum-Female" parents="gum-Person" />
   <type name="gum-Male" parents="gum-Person" />
-  <type name="slm-Robot" parents="gum-ConsciousBeing" />
-  <type name="slm-Pedestrian" parents="gum-ConsciousBeing" />
-  <type name="slm-Graffiti" parents="gum-NonDecomposableObject" />
-  <type name="slm-Clue" parents="gum-NonDecomposableObject" />
-  <type name="slm-Road" parents="gum-NonDecomposableObject" />
-  <type name="slm-Canal" parents="gum-NonDecomposableObject" />
-  <type name="slm-Bend" parents="gum-NonDecomposableObject" />
-  <type name="slm-OldPines" parents="gum-NonDecomposableObject" />
-  <type name="slm-Motorway" parents="gum-NonDecomposableObject" />
-  <type name="slm-Lake" parents="gum-NonDecomposableObject" />
-  <type name="slm-Dwelling" parents="gum-NonDecomposableObject" />
-  <type name="slm-Tablecloth" parents="gum-NonDecomposableObject" />
-  <type name="slm-Monk" parents="gum-NonDecomposableObject" />
-  <type name="slm-SocialRole" parents="gum-NonDecomposableObject" />
-  <type name="slm-Professor" parents="slm-SocialRole" />
-  <type name="slm-Secretary" parents="slm-SocialRole" />
-  <type name="slm-Student" parents="slm-SocialRole" />
-  <type name="slm-Administrator" parents="slm-SocialRole" />
-  <type name="slm-Car" parents="gum-NonDecomposableObject" />
-  <type name="slm-Boxcar" parents="gum-NonDecomposableObject" />
-  <type name="slm-Vase" parents="gum-NonDecomposableObject" />
-  <type name="slm-Cliff" parents="gum-NonDecomposableObject" />
-  <type name="slm-Nail" parents="gum-NonDecomposableObject" />
-  <type name="slm-Nurse" parents="gum-NonDecomposableObject" />
-  <type name="slm-Squirrel" parents="gum-NonDecomposableObject" />
-  <type name="slm-Ground" parents="gum-DecomposableObject" />
-  <type name="slm-Line" parents="gum-NonDecomposableObject" />
-  <type name="slm-Shoe" parents="gum-NonDecomposableObject" />
-  <type name="slm-Prisoner" parents="gum-NonDecomposableObject" />
+  <type name="glm-Robot" parents="gum-ConsciousBeing" />
+  <type name="glm-Pedestrian" parents="gum-ConsciousBeing" />
+  <type name="glm-Graffiti" parents="gum-NonDecomposableObject" />
+  <type name="glm-Clue" parents="gum-NonDecomposableObject" />
+  <type name="glm-Road" parents="gum-NonDecomposableObject" />
+  <type name="glm-Canal" parents="gum-NonDecomposableObject" />
+  <type name="glm-Bend" parents="gum-NonDecomposableObject" />
+  <type name="glm-OldPines" parents="gum-NonDecomposableObject" />
+  <type name="glm-Motorway" parents="gum-NonDecomposableObject" />
+  <type name="glm-Lake" parents="gum-NonDecomposableObject" />
+  <type name="glm-Dwelling" parents="gum-NonDecomposableObject" />
+  <type name="glm-Tablecloth" parents="gum-NonDecomposableObject" />
+  <type name="glm-Monk" parents="gum-NonDecomposableObject" />
+  <type name="glm-SocialRole" parents="gum-NonDecomposableObject" />
+  <type name="glm-Professor" parents="glm-SocialRole" />
+  <type name="glm-Secretary" parents="glm-SocialRole" />
+  <type name="glm-Student" parents="glm-SocialRole" />
+  <type name="glm-Administrator" parents="glm-SocialRole" />
+  <type name="glm-Car" parents="gum-NonDecomposableObject" />
+  <type name="glm-Boxcar" parents="gum-NonDecomposableObject" />
+  <type name="glm-Vase" parents="gum-NonDecomposableObject" />
+  <type name="glm-Cliff" parents="gum-NonDecomposableObject" />
+  <type name="glm-Nail" parents="gum-NonDecomposableObject" />
+  <type name="glm-Nurse" parents="gum-NonDecomposableObject" />
+  <type name="glm-Squirrel" parents="gum-NonDecomposableObject" />
+  <type name="glm-Ground" parents="gum-DecomposableObject" />
+  <type name="glm-Line" parents="gum-NonDecomposableObject" />
+  <type name="glm-Shoe" parents="gum-NonDecomposableObject" />
+  <type name="glm-Prisoner" parents="gum-NonDecomposableObject" />
   <type name="gum-NonConsciousThing" parents="gum-SimpleThing" />
   <type name="gum-Substance" parents="gum-NonDecomposableObject gum-NonConsciousThing" />
   <type name="gum-Time" parents="gum-TemporalObject gum-Substance" />
@@ -238,127 +238,127 @@ Licence:     This file is free software; you can redistribute it and/or modify
   <type name="gum-SpaceInterval" parents="gum-SpatialObject gum-OrderedObject" />
   <type name="gum-OneOrTwoDLocation" parents="gum-SpaceInterval" />
   <type name="gum-ThreeDLocation" parents="gum-SpaceInterval" />
-  <type name="slm-Building" parents="gum-ThreeDLocation" />
-  <type name="slm-Library" parents="slm-Building" />
-  <type name="slm-Cinema" parents="slm-Building" />
-  <type name="slm-Bakery" parents="slm-Building" />
-  <type name="slm-AcademicBuilding" parents="slm-Building" />
-  <type name="slm-GeoScienceBuilding" parents="slm-AcademicBuilding" />
-  <type name="slm-ChemistryBuilding" parents="slm-AcademicBuilding" />
-  <type name="slm-ComputerScienceBuilding" parents="slm-AcademicBuilding" />
-  <type name="slm-SocialScienceBuilding" parents="slm-AcademicBuilding" />
-  <type name="slm-AdministrationBuilding" parents="slm-Building" />
-  <type name="slm-Restaurant" parents="slm-Building" />
-  <type name="slm-BuildingComponent" parents="gum-ThreeDLocation" />
-  <type name="slm-Window" parents="slm-BuildingComponent" />
-  <type name="slm-Door" parents="slm-BuildingComponent" />
-  <type name="slm-Wall" parents="slm-BuildingComponent" />
-  <type name="slm-Floor" parents="slm-BuildingComponent" />
-  <type name="slm-Ceiling" parents="slm-BuildingComponent" />
-  <type name="slm-BuildingSpace" parents="gum-ThreeDLocation" />
-  <type name="slm-FloorArea" parents="slm-BuildingSpace" />
-  <type name="slm-Lobby" parents="slm-BuildingSpace" />
-  <type name="slm-Hall" parents="slm-BuildingSpace" />
-  <type name="slm-Stairway" parents="slm-BuildingSpace" />
-  <type name="slm-Closet" parents="slm-BuildingSpace" />
-  <type name="slm-Junction" parents="slm-BuildingSpace" />
+  <type name="glm-Building" parents="gum-ThreeDLocation" />
+  <type name="glm-Library" parents="glm-Building" />
+  <type name="glm-Cinema" parents="glm-Building" />
+  <type name="glm-Bakery" parents="glm-Building" />
+  <type name="glm-AcademicBuilding" parents="glm-Building" />
+  <type name="glm-GeoScienceBuilding" parents="glm-AcademicBuilding" />
+  <type name="glm-ChemistryBuilding" parents="glm-AcademicBuilding" />
+  <type name="glm-ComputerScienceBuilding" parents="glm-AcademicBuilding" />
+  <type name="glm-SocialScienceBuilding" parents="glm-AcademicBuilding" />
+  <type name="glm-AdministrationBuilding" parents="glm-Building" />
+  <type name="glm-Restaurant" parents="glm-Building" />
+  <type name="glm-BuildingComponent" parents="gum-ThreeDLocation" />
+  <type name="glm-Window" parents="glm-BuildingComponent" />
+  <type name="glm-Door" parents="glm-BuildingComponent" />
+  <type name="glm-Wall" parents="glm-BuildingComponent" />
+  <type name="glm-Floor" parents="glm-BuildingComponent" />
+  <type name="glm-Ceiling" parents="glm-BuildingComponent" />
+  <type name="glm-BuildingSpace" parents="gum-ThreeDLocation" />
+  <type name="glm-FloorArea" parents="glm-BuildingSpace" />
+  <type name="glm-Lobby" parents="glm-BuildingSpace" />
+  <type name="glm-Hall" parents="glm-BuildingSpace" />
+  <type name="glm-Stairway" parents="glm-BuildingSpace" />
+  <type name="glm-Closet" parents="glm-BuildingSpace" />
+  <type name="glm-Junction" parents="glm-BuildingSpace" />
 
-  <type name="slm-Corner" parents="slm-BuildingSpace" />
-  <type name="slm-Room" parents="slm-BuildingSpace" />
-  <type name="slm-ConferenceRoom" parents="slm-Room" />
-  <type name="slm-StoreRoom" parents="slm-Room" />
-  <type name="slm-Bathroom" parents="slm-Room" />
-  <type name="slm-Office" parents="slm-Room" />
-  <type name="slm-Bar" parents="slm-Room" />
-  <type name="slm-Classroom" parents="slm-Room" />
-  <type name="slm-Laboratory" parents="slm-Room" />
-  <type name="slm-ToiletRoom" parents="slm-Room" />
-  <type name="slm-MensToilets" parents="slm-ToiletRoom" />
-  <type name="slm-LadiesToilets" parents="slm-ToiletRoom" />
-  <type name="slm-Kitchen" parents="slm-Room" />
-  <type name="slm-PostRoom" parents="slm-Room" />
-  <type name="slm-CopyRoom" parents="slm-Room" />
-  <type name="slm-Stairwell" parents="slm-Room" />
-  <type name="slm-MainStairwell" parents="slm-Room" />
-  <type name="slm-PostOffice" parents="slm-Room" />
-  <type name="slm-Bridge" parents="slm-Room" />
-  <type name="slm-Fountain" parents="slm-Room" />
-  <type name="slm-LectureHall" parents="slm-Room" />
-  <type name="slm-Hallway" parents="slm-BuildingSpace" />
-  <type name="slm-DoorWay" parents="slm-BuildingSpace" />
-  <type name="slm-Corridor" parents="slm-BuildingSpace" />
-  <type name="slm-Elevator" parents="slm-BuildingSpace" />
+  <type name="glm-Corner" parents="glm-BuildingSpace" />
+  <type name="glm-Room" parents="glm-BuildingSpace" />
+  <type name="glm-ConferenceRoom" parents="glm-Room" />
+  <type name="glm-StoreRoom" parents="glm-Room" />
+  <type name="glm-Bathroom" parents="glm-Room" />
+  <type name="glm-Office" parents="glm-Room" />
+  <type name="glm-Bar" parents="glm-Room" />
+  <type name="glm-Classroom" parents="glm-Room" />
+  <type name="glm-Laboratory" parents="glm-Room" />
+  <type name="glm-ToiletRoom" parents="glm-Room" />
+  <type name="glm-MensToilets" parents="glm-ToiletRoom" />
+  <type name="glm-LadiesToilets" parents="glm-ToiletRoom" />
+  <type name="glm-Kitchen" parents="glm-Room" />
+  <type name="glm-PostRoom" parents="glm-Room" />
+  <type name="glm-CopyRoom" parents="glm-Room" />
+  <type name="glm-Stairwell" parents="glm-Room" />
+  <type name="glm-MainStairwell" parents="glm-Room" />
+  <type name="glm-PostOffice" parents="glm-Room" />
+  <type name="glm-Bridge" parents="glm-Room" />
+  <type name="glm-Fountain" parents="glm-Room" />
+  <type name="glm-LectureHall" parents="glm-Room" />
+  <type name="glm-Hallway" parents="glm-BuildingSpace" />
+  <type name="glm-DoorWay" parents="glm-BuildingSpace" />
+  <type name="glm-Corridor" parents="glm-BuildingSpace" />
+  <type name="glm-Elevator" parents="glm-BuildingSpace" />
   <type name="gum-SpacePoint" parents="gum-SpatialObject gum-NonDecomposableObject" />
   <type name="gum-ZeroDLocation" parents="gum-SpacePoint" />
-  <type name="slm-Furnishings" parents="gum-SpatialObject" />
-  <type name="slm-Patchcabinet" parents="slm-Furnishings" />
-  <type name="slm-Book" parents="slm-Furnishings" />
-  <type name="slm-Phone" parents="slm-Furnishings" />
-  <type name="slm-Furniture" parents="slm-Furnishings" />
-  <type name="slm-Chair" parents="slm-Furniture" />
-  <type name="slm-Stool" parents="slm-Chair" />
-  <type name="slm-OfficeChair" parents="slm-Chair" />
-  <type name="slm-ArmChair" parents="slm-Chair" />
-  <type name="slm-Table" parents="slm-Furniture" />
-  <type name="slm-Pen" parents="slm-Furniture" />
-  <type name="slm-Desk" parents="slm-Furniture" />
-  <type name="slm-CoatRack" parents="slm-Furniture" />
-  <type name="slm-Sofa" parents="slm-Furniture" />
-  <type name="slm-Picture" parents="slm-Furniture" />
-  <type name="slm-Trashcan" parents="slm-Furnishings" />
-  <type name="slm-Cabinet" parents="slm-Furnishings" />
-  <type name="slm-Lamp" parents="slm-Furnishings" />
-  <type name="slm-Duck" parents="slm-Furnishings" />
-  <type name="slm-Head" parents="slm-Furnishings" />
-  <type name="slm-Board" parents="slm-Furnishings" />
-  <type name="slm-Blackboard" parents="slm-Board" />
-  <type name="slm-Whiteboard" parents="slm-Board" />
-  <type name="slm-Toy" parents="slm-Furnishings" />
-  <type name="slm-Ball" parents="slm-Toy" />
-  <type name="slm-Block" parents="slm-Toy" />
-  <type name="slm-Container" parents="slm-Furnishings" />
-  <type name="slm-Jar" parents="slm-Container" />
-  <type name="slm-Mug" parents="slm-Container" />
-  <type name="slm-Box" parents="slm-Container" />
-  <type name="slm-Tree" parents="slm-Container" />
-  <type name="slm-Apple" parents="slm-Container" />
-  <type name="slm-Water" parents="slm-Container" />
-  <type name="slm-Pool" parents="slm-Container" />
-  <type name="slm-Camera" parents="slm-Container" />
-  <type name="slm-Needle" parents="slm-Container" />
-  <type name="slm-CompassNeedle" parents="slm-Container" />
-  <type name="slm-Bucket" parents="slm-Container" />
-  <type name="slm-Carton" parents="slm-Container" />
-  <type name="slm-Cup" parents="slm-Container" />
-  <type name="slm-Can" parents="slm-Container" />
-  <type name="slm-Screen" parents="slm-Furnishings" />
-  <type name="slm-CokeMachine" parents="slm-Furnishings" />
-  <type name="slm-Device" parents="gum-SpatialObject" />
-  <type name="slm-Electronics" parents="slm-Device" />
-  <type name="slm-ElectricityCord" parents="slm-Electronics" />
-  <type name="slm-Projector" parents="slm-Electronics" />
-  <type name="slm-OverheadProjector" parents="slm-Projector" />
-  <type name="slm-ComputerProjector" parents="slm-Projector" />
-  <type name="slm-ComputerEquipment" parents="slm-Electronics" />
-  <type name="slm-Computer" parents="slm-ComputerEquipment" />
-  <type name="slm-Monitor" parents="slm-ComputerEquipment" />
-  <type name="slm-Printer" parents="slm-ComputerEquipment" />
-  <type name="slm-Keyboard" parents="slm-ComputerEquipment" />
-  <type name="slm-Mouse" parents="slm-ComputerEquipment" />
-  <type name="slm-Speakers" parents="slm-ComputerEquipment" />
-  <type name="slm-Photocopier" parents="slm-Electronics" />
-  <type name="slm-Appliance" parents="slm-Device" />
-  <type name="slm-Refridgerator" parents="slm-Appliance" />
-  <type name="slm-Microwave" parents="slm-Appliance" />
-  <type name="slm-CoffeeMaker" parents="slm-Appliance" />
-  <type name="slm-Fixture" parents="gum-SpatialObject" />
-  <type name="slm-Sink" parents="slm-Fixture" />
-  <type name="slm-Faucet" parents="slm-Fixture" />
-  <type name="slm-Bathtub" parents="slm-Fixture" />
-  <type name="slm-Toilet" parents="slm-Fixture" />
-  <type name="slm-Urinal" parents="slm-Fixture" />
-  <type name="slm-Obstacle" parents="gum-SpatialObject" />
-  <type name="slm-Way" parents="gum-SpatialTemporal" />
+  <type name="glm-Furnishings" parents="gum-SpatialObject" />
+  <type name="glm-Patchcabinet" parents="glm-Furnishings" />
+  <type name="glm-Book" parents="glm-Furnishings" />
+  <type name="glm-Phone" parents="glm-Furnishings" />
+  <type name="glm-Furniture" parents="glm-Furnishings" />
+  <type name="glm-Chair" parents="glm-Furniture" />
+  <type name="glm-Stool" parents="glm-Chair" />
+  <type name="glm-OfficeChair" parents="glm-Chair" />
+  <type name="glm-ArmChair" parents="glm-Chair" />
+  <type name="glm-Table" parents="glm-Furniture" />
+  <type name="glm-Pen" parents="glm-Furniture" />
+  <type name="glm-Desk" parents="glm-Furniture" />
+  <type name="glm-CoatRack" parents="glm-Furniture" />
+  <type name="glm-Sofa" parents="glm-Furniture" />
+  <type name="glm-Picture" parents="glm-Furniture" />
+  <type name="glm-Trashcan" parents="glm-Furnishings" />
+  <type name="glm-Cabinet" parents="glm-Furnishings" />
+  <type name="glm-Lamp" parents="glm-Furnishings" />
+  <type name="glm-Duck" parents="glm-Furnishings" />
+  <type name="glm-Head" parents="glm-Furnishings" />
+  <type name="glm-Board" parents="glm-Furnishings" />
+  <type name="glm-Blackboard" parents="glm-Board" />
+  <type name="glm-Whiteboard" parents="glm-Board" />
+  <type name="glm-Toy" parents="glm-Furnishings" />
+  <type name="glm-Ball" parents="glm-Toy" />
+  <type name="glm-Block" parents="glm-Toy" />
+  <type name="glm-Container" parents="glm-Furnishings" />
+  <type name="glm-Jar" parents="glm-Container" />
+  <type name="glm-Mug" parents="glm-Container" />
+  <type name="glm-Box" parents="glm-Container" />
+  <type name="glm-Tree" parents="glm-Container" />
+  <type name="glm-Apple" parents="glm-Container" />
+  <type name="glm-Water" parents="glm-Container" />
+  <type name="glm-Pool" parents="glm-Container" />
+  <type name="glm-Camera" parents="glm-Container" />
+  <type name="glm-Needle" parents="glm-Container" />
+  <type name="glm-CompassNeedle" parents="glm-Container" />
+  <type name="glm-Bucket" parents="glm-Container" />
+  <type name="glm-Carton" parents="glm-Container" />
+  <type name="glm-Cup" parents="glm-Container" />
+  <type name="glm-Can" parents="glm-Container" />
+  <type name="glm-Screen" parents="glm-Furnishings" />
+  <type name="glm-CokeMachine" parents="glm-Furnishings" />
+  <type name="glm-Device" parents="gum-SpatialObject" />
+  <type name="glm-Electronics" parents="glm-Device" />
+  <type name="glm-ElectricityCord" parents="glm-Electronics" />
+  <type name="glm-Projector" parents="glm-Electronics" />
+  <type name="glm-OverheadProjector" parents="glm-Projector" />
+  <type name="glm-ComputerProjector" parents="glm-Projector" />
+  <type name="glm-ComputerEquipment" parents="glm-Electronics" />
+  <type name="glm-Computer" parents="glm-ComputerEquipment" />
+  <type name="glm-Monitor" parents="glm-ComputerEquipment" />
+  <type name="glm-Printer" parents="glm-ComputerEquipment" />
+  <type name="glm-Keyboard" parents="glm-ComputerEquipment" />
+  <type name="glm-Mouse" parents="glm-ComputerEquipment" />
+  <type name="glm-Speakers" parents="glm-ComputerEquipment" />
+  <type name="glm-Photocopier" parents="glm-Electronics" />
+  <type name="glm-Appliance" parents="glm-Device" />
+  <type name="glm-Refridgerator" parents="glm-Appliance" />
+  <type name="glm-Microwave" parents="glm-Appliance" />
+  <type name="glm-CoffeeMaker" parents="glm-Appliance" />
+  <type name="glm-Fixture" parents="gum-SpatialObject" />
+  <type name="glm-Sink" parents="glm-Fixture" />
+  <type name="glm-Faucet" parents="glm-Fixture" />
+  <type name="glm-Bathtub" parents="glm-Fixture" />
+  <type name="glm-Toilet" parents="glm-Fixture" />
+  <type name="glm-Urinal" parents="glm-Fixture" />
+  <type name="glm-Obstacle" parents="gum-SpatialObject" />
+  <type name="glm-Way" parents="gum-SpatialObject" />
   <type name="gum-TemporalObject" parents="gum-SpatialTemporal" />
   <type name="gum-TimeInterval" parents="gum-TemporalObject gum-OrderedObject" />
   <type name="gum-Future" parents="gum-TimeInterval" />
@@ -375,120 +375,122 @@ Licence:     This file is free software; you can redistribute it and/or modify
   <type name="gum-NaturalNumber" parents="gum-Abstraction" />
   <type name="gum-Word" parents="gum-Abstraction" />
   <type name="gum-Name" parents="gum-Word" />
-  <type name="slm-Rolland" parents="gum-Name" />
-  <type name="slm-John" parents="gum-Name" />
-  <type name="slm-Robert" parents="gum-Name" />
-  <type name="slm-Shi" parents="gum-Name" />
-  <type name="slm-Tilman" parents="gum-Name" />
-  <type name="slm-Christian" parents="gum-Name" />
-  <type name="slm-Librarian" parents="gum-NonDecomposableObject" />
-  <type name="slm-Couple" parents="gum-NonDecomposableObject" />
-  <type name="slm-Salesman" parents="gum-NonDecomposableObject" />
-  <type name="slm-Thought" parents="gum-NonDecomposableObject" />
-  <type name="slm-Street" parents="gum-NonDecomposableObject" />
-  <type name="slm-Rifle" parents="gum-NonDecomposableObject" />
-  <type name="slm-Dish" parents="gum-NonDecomposableObject" />
-  <type name="slm-House" parents="gum-NonDecomposableObject" />
-  <type name="slm-Site" parents="gum-NonDecomposableObject" />
-  <type name="slm-Sheet" parents="gum-NonDecomposableObject" />
-  <type name="slm-Detective" parents="gum-NonDecomposableObject" />
-  <type name="slm-Blanket" parents="gum-NonDecomposableObject" />
-  <type name="slm-Mark" parents="gum-NonDecomposableObject" />
-  <type name="slm-Lid" parents="gum-NonDecomposableObject" />
+  <type name="glm-Rolland" parents="gum-Name" />
+  <type name="glm-John" parents="gum-Name" />
+  <type name="glm-Robert" parents="gum-Name" />
+  <type name="glm-Shi" parents="gum-Name" />
+  <type name="glm-Tilman" parents="gum-Name" />
+  <type name="glm-Christian" parents="gum-Name" />
+  <type name="glm-Librarian" parents="gum-NonDecomposableObject" />
+  <type name="glm-Couple" parents="gum-NonDecomposableObject" />
+  <type name="glm-Salesman" parents="gum-NonDecomposableObject" />
+  <type name="glm-Thought" parents="gum-NonDecomposableObject" />
+  <type name="glm-Street" parents="gum-NonDecomposableObject" />
+  <type name="glm-Rifle" parents="gum-NonDecomposableObject" />
+  <type name="glm-Dish" parents="gum-NonDecomposableObject" />
+  <type name="glm-House" parents="gum-NonDecomposableObject" />
+  <type name="glm-Site" parents="gum-NonDecomposableObject" />
+  <type name="glm-Sheet" parents="gum-NonDecomposableObject" />
+  <type name="glm-Detective" parents="gum-NonDecomposableObject" />
+  <type name="glm-Blanket" parents="gum-NonDecomposableObject" />
+  <type name="glm-Mark" parents="gum-NonDecomposableObject" />
+  <type name="glm-Lid" parents="gum-NonDecomposableObject" />
   <type name="gum-NonDecomposableObject" parents="gum-SimpleThing" />
   <type name="gum-DecomposableObject" parents="gum-SimpleThing" />
   <type name="gum-OrderedObject" parents="gum-DecomposableObject" />
-  <type name="slm-Prison" parents="gum-NonDecomposableObject" />
-  <type name="slm-Cathedral" parents="gum-NonDecomposableObject" />
-  <type name="slm-Compass" parents="gum-NonDecomposableObject" />
-  <type name="slm-Dune" parents="gum-NonDecomposableObject" />
-  <type name="slm-Border" parents="gum-NonDecomposableObject" />
-  <type name="slm-Man" parents="gum-NonDecomposableObject" />
-  <type name="slm-Field" parents="gum-NonDecomposableObject" />
-  <type name="slm-Lion" parents="gum-NonDecomposableObject" />
-  <type name="slm-Plain" parents="gum-NonDecomposableObject" />
-  <type name="slm-Town" parents="gum-NonDecomposableObject" />
-  <type name="slm-Shop" parents="gum-NonDecomposableObject" />
-  <type name="slm-Rooftop" parents="gum-NonDecomposableObject" />
-  <type name="slm-Area" parents="gum-NonDecomposableObject" />
-  <type name="slm-Fuselage" parents="gum-NonDecomposableObject" />
-  <type name="slm-Toes" parents="gum-NonDecomposableObject" />
-  <type name="slm-Rack" parents="gum-NonDecomposableObject" />
-  <type name="slm-Mall" parents="gum-NonDecomposableObject" />
-  <type name="slm-Cemetary" parents="gum-NonDecomposableObject" />
-  <type name="slm-LivingThing" parents="gum-NonDecomposableObject" />
-  <type name="slm-Animal" parents="slm-LivingThing" />
-  <type name="slm-Plant" parents="slm-LivingThing" />
-  <type name="slm-Cupboard" parents="gum-NonDecomposableObject" />
-  <type name="slm-Jogger" parents="gum-NonDecomposableObject" />
-  <type name="slm-River" parents="gum-NonDecomposableObject" />
-  <type name="slm-Tarmack" parents="gum-NonDecomposableObject" />
-  <type name="slm-Fence" parents="gum-NonDecomposableObject" />
-  <type name="slm-Runner" parents="gum-NonDecomposableObject" />
-  <type name="slm-Rabbit" parents="gum-NonDecomposableObject" />
-  <type name="slm-Temple" parents="gum-NonDecomposableObject" />
-  <type name="slm-Mammoth" parents="gum-NonDecomposableObject" />
-  <type name="slm-Fibre" parents="gum-NonDecomposableObject" />
-  <type name="slm-Cargo" parents="gum-NonDecomposableObject" />
-  <type name="slm-Famine" parents="gum-NonDecomposableObject" />
-  <type name="slm-Checkpoint" parents="gum-NonDecomposableObject" />
-  <type name="slm-Hole" parents="gum-NonDecomposableObject" />
-  <type name="slm-Ship" parents="gum-NonDecomposableObject" />
-  <type name="slm-Tunnel" parents="gum-NonDecomposableObject" />
-  <type name="slm-Bird" parents="gum-NonDecomposableObject" />
-  <type name="slm-Bowl" parents="gum-NonDecomposableObject slm-Container" /> <!-- @shoeffner: added slm-Container, removed duplicate entry -->
-  <type name="slm-Fire" parents="gum-NonDecomposableObject" />
-  <type name="slm-Cell" parents="gum-NonDecomposableObject" />
-  <type name="slm-Park" parents="gum-NonDecomposableObject" />
-  <type name="slm-View" parents="gum-NonDecomposableObject" />
-  <type name="slm-HotDogStand" parents="gum-NonDecomposableObject" />
-  <type name="slm-CottageCheese" parents="gum-NonDecomposableObject" />
-  <type name="slm-ParmesanCheese" parents="gum-NonDecomposableObject" />
-  <type name="slm-Macys" parents="gum-NonDecomposableObject" />
-  <type name="slm-TamilNadu" parents="gum-NonDecomposableObject" />
-  <type name="slm-India" parents="gum-NonDecomposableObject" />
-  <type name="slm-Bedroom" parents="gum-NonDecomposableObject" />
+  <type name="glm-Prison" parents="gum-NonDecomposableObject" />
+  <type name="glm-Cathedral" parents="gum-NonDecomposableObject" />
+  <type name="glm-Compass" parents="gum-NonDecomposableObject" />
+  <type name="glm-Dune" parents="gum-NonDecomposableObject" />
+  <type name="glm-Border" parents="gum-NonDecomposableObject" />
+  <type name="glm-Man" parents="gum-NonDecomposableObject" />
+  <type name="glm-Field" parents="gum-NonDecomposableObject" />
+  <type name="glm-Lion" parents="gum-NonDecomposableObject" />
+  <type name="glm-Plain" parents="gum-NonDecomposableObject" />
+  <type name="glm-Town" parents="gum-NonDecomposableObject" />
+  <type name="glm-Shop" parents="gum-NonDecomposableObject" />
+  <type name="glm-Rooftop" parents="gum-NonDecomposableObject" />
+  <type name="glm-Area" parents="gum-NonDecomposableObject" />
+  <type name="glm-Fuselage" parents="gum-NonDecomposableObject" />
+  <type name="glm-Toes" parents="gum-NonDecomposableObject" />
+  <type name="glm-Rack" parents="gum-NonDecomposableObject" />
+  <type name="glm-Mall" parents="gum-NonDecomposableObject" />
+  <type name="glm-Cemetary" parents="gum-NonDecomposableObject" />
+  <type name="glm-LivingThing" parents="gum-NonDecomposableObject" />
+  <type name="glm-Animal" parents="glm-LivingThing" />
+  <type name="glm-Plant" parents="glm-LivingThing" />
+  <type name="glm-Cupboard" parents="gum-NonDecomposableObject" />
+  <type name="glm-Jogger" parents="gum-NonDecomposableObject" />
+  <type name="glm-River" parents="gum-NonDecomposableObject" />
+  <type name="glm-Tarmack" parents="gum-NonDecomposableObject" />
+  <type name="glm-Fence" parents="gum-NonDecomposableObject" />
+  <type name="glm-Runner" parents="gum-NonDecomposableObject" />
+  <type name="glm-Rabbit" parents="gum-NonDecomposableObject" />
+  <type name="glm-Temple" parents="gum-NonDecomposableObject" />
+  <type name="glm-Mammoth" parents="gum-NonDecomposableObject" />
+  <type name="glm-Fibre" parents="gum-NonDecomposableObject" />
+  <type name="glm-Cargo" parents="gum-NonDecomposableObject" />
+  <type name="glm-Famine" parents="gum-NonDecomposableObject" />
+  <type name="glm-Checkpoint" parents="gum-NonDecomposableObject" />
+  <type name="glm-Hole" parents="gum-NonDecomposableObject" />
+  <type name="glm-Ship" parents="gum-NonDecomposableObject" />
+  <type name="glm-Tunnel" parents="gum-NonDecomposableObject" />
+  <type name="glm-Bird" parents="gum-NonDecomposableObject" />
+  <type name="glm-Bowl" parents="gum-NonDecomposableObject glm-Container" /> <!-- @shoeffner: added glm-Container, removed duplicate entry -->
+  <type name="glm-Fire" parents="gum-NonDecomposableObject" />
+  <type name="glm-Cell" parents="gum-NonDecomposableObject" />
+  <type name="glm-Park" parents="gum-NonDecomposableObject" />
+  <type name="glm-View" parents="gum-NonDecomposableObject" />
+  <type name="glm-HotDogStand" parents="gum-NonDecomposableObject" />
+  <type name="glm-CottageCheese" parents="gum-NonDecomposableObject" />
+  <type name="glm-ParmesanCheese" parents="gum-NonDecomposableObject" />
+  <type name="glm-Macys" parents="gum-NonDecomposableObject" />
+  <type name="glm-TamilNadu" parents="gum-NonDecomposableObject" />
+  <type name="glm-India" parents="gum-NonDecomposableObject" />
+  <type name="glm-Bedroom" parents="gum-NonDecomposableObject" />
   <type name="gum-Process" parents="gum-Element" />
-  <type name="slm-Putting" parents="gum-Process" />
-  <type name="slm-Standing" parents="gum-Process" />
-  <type name="slm-Placing" parents="gum-Process" />
-  <type name="slm-Dancing" parents="gum-Process" />
-  <type name="slm-Rotating" parents="gum-Process" />
-  <type name="slm-Bringing" parents="gum-Process" />
-  <type name="slm-Turning" parents="gum-Process" />
-  <type name="slm-Making" parents="gum-Process" />
-  <type name="slm-Proceeding" parents="gum-Process" />
-  <type name="slm-Swimming" parents="gum-Process" />
-  <type name="slm-Entering" parents="gum-Process" />
-  <type name="slm-Approaching" parents="gum-Process" />
-  <type name="slm-Continuing" parents="gum-Process" />
-  <type name="slm-Exiting" parents="gum-Process" />
-  <type name="slm-Being" parents="gum-Process" />
-  <type name="slm-Directing" parents="gum-Process" />
-  <type name="slm-Sleeping" parents="gum-Process" />
-  <type name="slm-Going" parents="gum-Process" />
-  <type name="slm-Meaning" parents="gum-Process" />
-  <type name="slm-Facing" parents="gum-Process" />
-  <type name="slm-Pointing" parents="gum-Process" />
-  <type name="slm-Driving" parents="gum-Process" />
-  <type name="slm-Jumping" parents="gum-Process" />
-  <type name="slm-Leaping" parents="gum-Process" />
-  <type name="slm-Fleeing" parents="gum-Process" />
-  <type name="slm-Walking" parents="gum-Process" />
-  <type name="slm-Running" parents="gum-Process" />
-  <type name="slm-Stirring" parents="gum-Process" />
-  <type name="slm-Heating" parents="gum-Process" />
-  <type name="slm-Knowing" parents="gum-Process" />
-  <type name="slm-Halting" parents="gum-Process" />
-  <type name="slm-Passing" parents="gum-Process" />
-  <type name="slm-Telling" parents="gum-Process" />
-  <type name="slm-Returning" parents="gum-Process" />
-  <type name="slm-Taking" parents="gum-Process" />
-  <type name="slm-Leaving" parents="gum-Process" />
-  <type name="slm-Showing" parents="gum-Process" />
-  <type name="slm-Stopping" parents="gum-Process" />
-  <type name="slm-Moving" parents="gum-Process" />
-  <type name="slm-Racing" parents="gum-Process" />
+  <type name="glm-Putting" parents="gum-Process" />
+  <type name="glm-Standing" parents="gum-Process" />
+  <type name="glm-Placing" parents="gum-Process" />
+  <type name="glm-Dancing" parents="gum-Process" />
+  <type name="glm-Rotating" parents="gum-Process" />
+  <type name="glm-Bringing" parents="gum-Process" />
+  <type name="glm-Turning" parents="gum-Process" />
+  <type name="glm-Making" parents="gum-Process" />
+  <type name="glm-Proceeding" parents="gum-Process" />
+  <type name="glm-Swimming" parents="gum-Process" />
+  <type name="glm-Entering" parents="gum-Process" />
+  <type name="glm-Approaching" parents="gum-Process" />
+  <type name="glm-Continuing" parents="gum-Process" />
+  <type name="glm-Exiting" parents="gum-Process" />
+  <type name="glm-Being" parents="gum-Process" />
+  <type name="glm-Directing" parents="gum-Process" />
+  <type name="glm-Sleeping" parents="gum-Process" />
+  <type name="glm-Going" parents="gum-Process" />
+  <type name="glm-Meaning" parents="gum-Process" />
+  <type name="glm-Facing" parents="gum-Process" />
+  <type name="glm-Pointing" parents="gum-Process" />
+  <type name="glm-Driving" parents="gum-Process" />
+  <type name="glm-Jumping" parents="gum-Process" />
+  <type name="glm-Leaping" parents="gum-Process" />
+  <type name="glm-Fleeing" parents="gum-Process" />
+  <type name="glm-Walking" parents="gum-Process" />
+  <type name="glm-Running" parents="gum-Process" />
+  <type name="glm-Stirring" parents="gum-Process" />
+  <type name="glm-Whisking" parents="gum-Process" />
+  <type name="glm-Heating" parents="gum-Process" />
+  <type name="glm-Boiling" parents="gum-Process" />
+  <type name="glm-Knowing" parents="gum-Process" />
+  <type name="glm-Halting" parents="gum-Process" />
+  <type name="glm-Passing" parents="gum-Process" />
+  <type name="glm-Telling" parents="gum-Process" />
+  <type name="glm-Returning" parents="gum-Process" />
+  <type name="glm-Taking" parents="gum-Process" />
+  <type name="glm-Leaving" parents="gum-Process" />
+  <type name="glm-Showing" parents="gum-Process" />
+  <type name="glm-Stopping" parents="gum-Process" />
+  <type name="glm-Moving" parents="gum-Process" />
+  <type name="glm-Racing" parents="gum-Process" />
   <type name="gum-SimpleQuality" parents="gum-Element" />
   <type name="gum-ClassAscription" parents="gum-SimpleQuality" />
   <type name="gum-LogicalQuality" parents="gum-SimpleQuality" />
@@ -497,18 +499,18 @@ Licence:     This file is free software; you can redistribute it and/or modify
   <type name="gum-ScalableQuality" parents="gum-MaterialWorldQuality" />
   <type name="gum-SenseANDMeasureQuality" parents="gum-StativeQuality gum-PolarQuality gum-ScalableQuality" />
   <type name="gum-Color" parents="gum-SenseANDMeasureQuality" />
-  <type name="slm-Yellow" parents="gum-Color" />
-  <type name="slm-Black" parents="gum-Color" />
-  <type name="slm-White" parents="gum-Color" />
-  <type name="slm-Pink" parents="gum-Color" />
-  <type name="slm-Blue" parents="gum-Color" />
-  <type name="slm-Brown" parents="gum-Color" />
-  <type name="slm-Red" parents="gum-Color" />
-  <type name="slm-Green" parents="gum-Color" />
-  <type name="slm-Orange" parents="gum-Color" />
+  <type name="glm-Yellow" parents="gum-Color" />
+  <type name="glm-Black" parents="gum-Color" />
+  <type name="glm-White" parents="gum-Color" />
+  <type name="glm-Pink" parents="gum-Color" />
+  <type name="glm-Blue" parents="gum-Color" />
+  <type name="glm-Brown" parents="gum-Color" />
+  <type name="glm-Red" parents="gum-Color" />
+  <type name="glm-Green" parents="gum-Color" />
+  <type name="glm-Orange" parents="gum-Color" />
   <type name="gum-Size" parents="gum-SenseANDMeasureQuality" />
-  <type name="slm-Big" parents="gum-Size" />
-  <type name="slm-Small" parents="gum-Size" />
+  <type name="glm-Big" parents="gum-Size" />
+  <type name="glm-Small" parents="gum-Size" />
   <type name="gum-Age" parents="gum-SenseANDMeasureQuality" />
   <type name="gum-BehavioralQuality" parents="gum-DynamicQuality gum-PolarQuality gum-ScalableQuality" />
   <type name="gum-EvaluativeQuality" parents="gum-PolarQuality gum-StativeQuality gum-ScalableQuality" />
@@ -537,7 +539,7 @@ Licence:     This file is free software; you can redistribute it and/or modify
   <type name="gum-Elaboration" parents="gum-Expansion" />
   <type name="gum-Disjunction" parents="gum-MultiConfiguration" />
   <type name="gum-Conjunction" parents="gum-MultiConfiguration" />
-  <type name="slm-Sequencing" parents="gum-MultiConfiguration" />
+  <type name="glm-Sequencing" parents="gum-MultiConfiguration" />
   <type name="gum-Projection" parents="gum-MultiConfiguration" />
   <type name="gum-LocutionProjection" parents="gum-Projection" />
   <type name="gum-LocutionReporting" parents="gum-Reporting gum-LocutionProjection" />
@@ -681,24 +683,15 @@ Licence:     This file is free software; you can redistribute it and/or modify
   <type name="uio-Statement" parents="uio-PrimarySpeechFunctions" />
   <type name="uio-Question" parents="uio-PrimarySpeechFunctions" />
 
-  <!-- Non GUM/SLM Elements. Must find a home for these. -->
-  <type name="residue" parents="root" />
-  <type name="ling" parents="residue" />
-  <type name="ppdest" parents="residue" />
-  <type name="Conj-list" parents="residue" />
-  <type name="Disj-list" parents="residue" />
-  <type name="Du" parents="residue" />
-  <type name="Greeting" parents="Du" />
-  <type name="Ack" parents="Du" />
-  <type name="Reject" parents="Du" />
   <!-- Types for intermediate linguistic features
     and ad-hoc class names for realization
 
     might be renamed and/or relocated
+    in linguistic-features.owl
 
   -->
   <type name="linguistic" parents="root" />
-  <type name="slm-NatNum" parents="root" />
+  <type name="glm-NatNum" parents="root" />
   <type name="inf" parents="linguistic" />
   <type name="not-inf" parents="linguistic" />
   <type name="RealizationClassName" parents="linguistic" />
@@ -722,7 +715,6 @@ Licence:     This file is free software; you can redistribute it and/or modify
   <type name="dir" parents="ppnongoal npkinds" />
   <type name="modifdir" parents="ppnongoal" />
   <type name="front" parents="dir" />
-  <type name="xxy" parents="dir" />
   <type name="npnondir" parents="npkinds" />
   <type name="simple" parents="npnondir" />
   <type name="spatial" parents="simple" />
@@ -772,26 +764,26 @@ Licence:     This file is free software; you can redistribute it and/or modify
   -->
   <!--- Volume Units (in Bearbeitung) -->
 
-  <type name="slm-Spoon" />
-  <type name="slm-Teaspoon" parents="slm-Spoon" />
-  <type name="slm-Tsp." parents="slm-Spoon" />
-  <type name="slm-Tablespoon" parents="slm-Spoon" />
-  <type name="slm-T" parents="slm-Spoon" />
-  <type name="slm-Tbl." parents="slm-Spoon" />
-  <type name="slm-Tbs." parents="slm-Spoon" />
-  <type name="slm-Tbsp." parents="slm-Spoon" />
+  <type name="glm-Spoon" />
+  <type name="glm-Teaspoon" parents="glm-Spoon" />
+  <type name="glm-Tsp." parents="glm-Spoon" />
+  <type name="glm-Tablespoon" parents="glm-Spoon" />
+  <type name="glm-T" parents="glm-Spoon" />
+  <type name="glm-Tbl." parents="glm-Spoon" />
+  <type name="glm-Tbs." parents="glm-Spoon" />
+  <type name="glm-Tbsp." parents="glm-Spoon" />
 
 
    <!--- Types introduced for a cooking domain (03.11.18)	-->
 
-   <type name="slm-Egg" parents="gum-SimpleThing" />
-   <type name="slm-Eggs" parents="gum-SimpleThing" />
-   <!--type name="slm-Orange" parents="gum-SimpleThing" /--> <!-- TODO(@shoeffner): Removed because orange is already a color. -->
-   <type name="slm-Oranges" parents="gum-SimpleThing" />
-   <type name="slm-Oil" parents="gum-SimpleThing" />
-   <type name="slm-Oils" parents="gum-SimpleThing" />
-   <type name="slm-Pan" parents="gum-SimpleThing" />
-   <type name="slm-Pans" parents="gum-SimpleThing" />
+   <type name="glm-Egg" parents="gum-SimpleThing" />
+   <type name="glm-Eggs" parents="gum-SimpleThing" />
+   <!--type name="glm-Orange" parents="gum-SimpleThing" /--> <!-- TODO(@shoeffner): Removed because orange is already a color. -->
+   <type name="glm-Oranges" parents="gum-SimpleThing" />
+   <type name="glm-Oil" parents="gum-SimpleThing" />
+   <type name="glm-Oils" parents="gum-SimpleThing" />
+   <type name="glm-Pan" parents="gum-SimpleThing" />
+   <type name="glm-Pans" parents="gum-SimpleThing" />
 
 
 

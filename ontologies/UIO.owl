@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.diaspace.uni-bremen.de/UIO.owl#"
      xml:base="http://www.diaspace.uni-bremen.de/UIO.owl"
-     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#">
     <owl:Ontology rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl">
         <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/shoeffner/openccg-gum-cooking/master/ontologies/UIO.owl"/>
         <owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/protege"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">license: https://creativecommons.org/licenses/by/4.0/</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">developers: University of Bremen, SFB/TR8 Spatial Cognition, I1-[OntoSpace]
 https://www.ontospace.uni-bremen.de; SFB EASE, P01/H02 https://ease.informatik.uni-bremen.de</rdfs:comment>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">license: https://creativecommons.org/licenses/by/4.0/</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -162,6 +162,12 @@ https://www.ontospace.uni-bremen.de; SFB EASE, P01/H02 https://ease.informatik.u
     
 
 
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#hasWordForm -->
+
+    <owl:ObjectProperty rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#hasWordForm"/>
+    
+
+
     <!-- http://www.diaspace.uni-bremen.de/UIO.owl#isAnswerTo -->
 
     <owl:ObjectProperty rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#isAnswerTo">
@@ -175,6 +181,12 @@ https://www.ontospace.uni-bremen.de; SFB EASE, P01/H02 https://ease.informatik.u
     <owl:ObjectProperty rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#isAnsweredBy">
         <rdfs:subPropertyOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#forwardLookingRole"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#isWordFormOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#isWordFormOf"/>
     
 
 
@@ -329,6 +341,41 @@ https://www.ontospace.uni-bremen.de; SFB EASE, P01/H02 https://ease.informatik.u
     <owl:ObjectProperty rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#symmetricRhetoricalRelation">
         <rdfs:subPropertyOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#rhetoricalrelation"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#morphology -->
+
+    <owl:DatatypeProperty rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#morphology"/>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#numerus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#numerus"/>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#orthographicForm -->
+
+    <owl:DatatypeProperty rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#orthographicForm"/>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#partOfSpeech -->
+
+    <owl:DatatypeProperty rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#partOfSpeech"/>
     
 
 
@@ -932,9 +979,479 @@ https://www.ontospace.uni-bremen.de; SFB EASE, P01/H02 https://ease.informatik.u
         <protege:subclassesDisjoint rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</protege:subclassesDisjoint>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#WordForm -->
+
+    <owl:Class rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#affirmation-okay -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#affirmation-okay">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#Affirmation"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#okay"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PARTICLE</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#affirmation-sure -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#affirmation-sure">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#Affirmation"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#sure"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PARTICLE</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#affirmation-yeah -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#affirmation-yeah">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#Affirmation"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#yeah"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PARTICLE</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#affirmation-yes -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#affirmation-yes">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#Affirmation"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#yes"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PARTICLE</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#bye -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#bye">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#leaveTaking-bye"/>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bye</orthographicForm>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bye_bye</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#denial-no -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#denial-no">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#Denial"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#no"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PARTICLE</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#emm -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#emm">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#signalHold-emm"/>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emm</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#goodbye -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#goodbye">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#leaveTaking-goodbye"/>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">goodbye</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#greeting-hello -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#greeting-hello">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#Greeting"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#hello"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PARTICLE</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#greeting-hi -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#greeting-hi">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#Greeting"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#hi"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PARTICLE</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#hearer-you -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#hearer-you">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#Hearer"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NP</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#hearer-your -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#hearer-your">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#Hearer"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#your"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POSSDET</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#hedging-maybe -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#hedging-maybe">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#Hedging"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#maybe"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PARTICLE</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#hedging-possibly -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#hedging-possibly">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#Hedging"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#possibly"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PARTICLE</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#hedging-probably -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#hedging-probably">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#Hedging"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#probably"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PARTICLE</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#hello -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#hello">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#greeting-hello"/>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hello</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#hi -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#hi">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#greeting-hi"/>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hi</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#hold_on -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#hold_on">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#signalHold-hold_on"/>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hold_on</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#i -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#i">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#speaker-i"/>
+        <morphology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1st pers</morphology>
+        <morphology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nom</morphology>
+        <numerus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sg</numerus>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I</orthographicForm>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">i</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#leaveTaking-bye -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#leaveTaking-bye">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#LeaveTaking"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#bye"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PARTICLE</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#leaveTaking-goodbye -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#leaveTaking-goodbye">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#LeaveTaking"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#goodbye"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PARTICLE</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#maybe -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#maybe">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#hedging-maybe"/>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maybe</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#me -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#me">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#speaker-me"/>
+        <morphology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1st pers</morphology>
+        <numerus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sg</numerus>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">me</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#my -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#my">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#speaker-my"/>
+        <morphology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1st pers</morphology>
+        <numerus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sg</numerus>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">my</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#no -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#no">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#denial-no"/>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</orthographicForm>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nope</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#okay -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#okay">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#affirmation-okay"/>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ok</orthographicForm>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">okay</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#pardon -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#pardon">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#signalNonUnderstanding-pardon"/>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pardon</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#possibly -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#possibly">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#hedging-possibly"/>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">possibly</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#probably -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#probably">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#hedging-probably"/>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">probably</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#signalHold-emm -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#signalHold-emm">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#SignalHold"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#emm"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PARTICLE</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#signalHold-hold_on -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#signalHold-hold_on">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#SignalHold"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#hold_on"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PARTICLE</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#signalNonUnderstanding-pardon -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#signalNonUnderstanding-pardon">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#SignalNonUnderstanding"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#pardon"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PARTICLE</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#signalNonUnderstanding-sorry -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#signalNonUnderstanding-sorry">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#SignalNonUnderstanding"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#sorry"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PARTICLE</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#signalNonUnderstanding-what -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#signalNonUnderstanding-what">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#SignalNonUnderstanding"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#what"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PARTICLE</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#sorry -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#sorry">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#signalNonUnderstanding-sorry"/>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sorry</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#speaker-i -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#speaker-i">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#Speaker"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#i"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NP</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#speaker-me -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#speaker-me">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#Speaker"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#me"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NP</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#speaker-my -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#speaker-my">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#Speaker"/>
+        <hasWordForm rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#my"/>
+        <partOfSpeech rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POSSDET</partOfSpeech>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#sure -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#sure">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#affirmation-sure"/>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sure</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#what -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#what">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#signalNonUnderstanding-what"/>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">what</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#yeah -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#yeah">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#affirmation-yeah"/>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yeah</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#yes -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#yes">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#affirmation-yes"/>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yep</orthographicForm>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yes</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#you -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#you">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <morphology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2nd pers</morphology>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">you</orthographicForm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.diaspace.uni-bremen.de/UIO.owl#your -->
+
+    <owl:NamedIndividual rdf:about="http://www.diaspace.uni-bremen.de/UIO.owl#your">
+        <rdf:type rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#WordForm"/>
+        <isWordFormOf rdf:resource="http://www.diaspace.uni-bremen.de/UIO.owl#hearer-your"/>
+        <morphology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2nd pers</morphology>
+        <numerus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sg</numerus>
+        <orthographicForm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">your</orthographicForm>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
