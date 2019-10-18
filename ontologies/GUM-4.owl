@@ -9,7 +9,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl">
-        <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/shoeffner/openccg-gum-cooking/master/ontologies/GUM-4.owl"/>
+        <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/vanjaSophie/openccg-gum-cooking/master/ontologies/GUM-4.owl"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GUM 4</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">license: https://creativecommons.org/licenses/by/4.0/</owl:versionInfo>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">developers: University of Bremen, SFB/TR8 Spatial Cognition, I1-[OntoSpace]

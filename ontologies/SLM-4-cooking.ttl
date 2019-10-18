@@ -7,15 +7,11 @@
 @base <http://www.semanticweb.org/vanjasophie/ontologies/2019/4/SLM-4-cooking.owl> .
 
 <http://www.semanticweb.org/vanjasophie/ontologies/2019/4/SLM-4-cooking.owl> rdf:type owl:Ontology ;
-                                                                              owl:imports <https://raw.githubusercontent.com/shoeffner/openccg-gum-cooking/master/ontologies/GUM-4-space.owl> .
+                                                                              owl:imports <https://raw.githubusercontent.com/vanjaSophie/openccg-gum-cooking/master/ontologies/GUM-4-space.owl> .
 
 #################################################################
 #    Object Properties
 #################################################################
-
-###  http://www.semanticweb.org/vanjasophie/ontologies/2019/4/SLM-4-cooking.owl#slmrelation
-:slmrelation rdf:type owl:ObjectProperty .
-
 
 ###  http://www.semanticweb.org/vanjasophie/ontologies/2019/4/SLM-4-cooking.owl#hasWordForm
 :hasWordForm rdf:type owl:ObjectProperty ;
@@ -30,6 +26,10 @@
 ###  http://www.semanticweb.org/vanjasophie/ontologies/2019/4/SLM-4-cooking.owl#negativePolarityOf
 :negativePolarityOf rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :slmrelation .
+
+
+###  http://www.semanticweb.org/vanjasophie/ontologies/2019/4/SLM-4-cooking.owl#slmrelation
+:slmrelation rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -2407,6 +2407,98 @@ This is contributing a spatial modality not a process."""^^xsd:string .
 ###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4-space.owl#TopProjection
 <https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4-space.owl#TopProjection> rdf:type owl:Class ;
                                                                                     rdfs:subClassOf <https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4-space.owl#VerticalProjection> .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Ability
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Ability> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Color
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Color> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Conjunction
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Conjunction> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ConsciousBeing
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ConsciousBeing> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#DecomposableObject
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#DecomposableObject> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Disjunction
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Disjunction> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Female
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Female> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Male
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Male> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#MultiConfiguration
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#MultiConfiguration> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Name
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Name> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NamedObject
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NamedObject> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NaturalNumber
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NaturalNumber> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Necessity
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Necessity> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonConsciousThing
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonConsciousThing> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonDecomposableObject
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonDecomposableObject> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Size
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Size> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SpatialObject
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SpatialObject> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalAfter
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalAfter> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalAt
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalAt> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalBefore
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalBefore> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalFrom
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalFrom> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ThreeDLocation
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ThreeDLocation> rdf:type owl:Class .
+
+
+###  https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TimePoint
+<https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TimePoint> rdf:type owl:Class .
 
 
 #################################################################

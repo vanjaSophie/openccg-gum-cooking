@@ -7,7 +7,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/vanjasophie/ontologies/2019/4/SLM-4-cooking.owl">
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/shoeffner/openccg-gum-cooking/master/ontologies/GUM-4-space.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/vanjaSophie/openccg-gum-cooking/master/ontologies/GUM-4-space.owl"/>
     </owl:Ontology>
     
 
