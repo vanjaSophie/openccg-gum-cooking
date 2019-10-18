@@ -1,20 +1,15 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#"
      xml:base="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:GUM-4="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:GUM-4="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#">
     <owl:Ontology rdf:about="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl">
         <owl:versionIRI rdf:resource="https://raw.githubusercontent.com/vanjaSophie/openccg-gum-cooking/master/ontologies/GUM-4.owl"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GUM 4</rdfs:label>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">license: https://creativecommons.org/licenses/by/4.0/</owl:versionInfo>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">developers: University of Bremen, SFB/TR8 Spatial Cognition, I1-[OntoSpace]
-https://www.ontospace.uni-bremen.de; SFB EASE, P01/H02 https://ease.informatik.uni-bremen.de</rdfs:comment>
-        <owl:versionInfo xml:lang="en">4.0</owl:versionInfo>
         <rdfs:comment xml:lang="en">The Generalized Upper Model 4.0 (GUM 4.0) is a linguistically motivated ontology,
 which aims primarily to mediate between natural language and application components.
 It is based on the semantic perspective of natural language as described in Halliday
@@ -24,11 +19,16 @@ domains. The complete model and all of its concepts and principles are described
 in detail in Bateman et al. [2006a], its underlying experimental linguistic results and
 language analysis are documented in Bateman et al. [2006b]. Currently, the Generalized
 Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">developers: University of Bremen, SFB/TR8 Spatial Cognition, I1-[OntoSpace]
+https://www.ontospace.uni-bremen.de; SFB EASE, P01/H02 https://ease.informatik.uni-bremen.de</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GUM 4</rdfs:label>
+        <owl:versionInfo xml:lang="en">4.0</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">license: https://creativecommons.org/licenses/by/4.0/</owl:versionInfo>
     </owl:Ontology>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -36,7 +36,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#accompaniment -->
@@ -46,7 +46,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:range rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SimpleThing"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This relation holds between objects which participate jointly in some process.  Accompaniment may be expressed as: {independent-argument} `be with&apos; {dependent-argument}; or by a prepositional phrase beginning with the preposition `with&apos; as in: {independent-	argument} ... `with&apos; {dependent-argument}. Note that it is not necessary for both of the participants to be aware of the participation. Thus both of the following sentences are examples of this relation: (1) John went for a walk with Mary. (2) John went for a walk with his umbrella. The relation also allows for variation in both a positive and negative direction. For example, `without&apos; is also a type of accompaniment, albeit negative, as is `instead of&apos;, which is an accompaniment of alternative.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#actee -->
@@ -55,7 +55,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#participantInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process participant describing the entity to which a process is `done&apos;, `carried out on&apos;, etc., e.g. &quot;John took a bath&quot;. The verb carries no info about what the process is actually doing.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#actor -->
@@ -64,7 +64,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#participantInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A transitivity function in a material clause; the participant always inherent in the clause according to the transitive model of transitivity. The process it participates in may or may not extend to affect another participant, the Goal. For instance, (Actor:) Henry (Process:) dove; (Actor:) Henry (Process:) kicked (Goal:) the ugly duckling.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#additive -->
@@ -73,7 +73,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#accompaniment"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One type of accompaniment that may holds between objects which participate jointly in some process. This form of accompaniment states that the accompaniment is positive and actual; it may be expressed by a prepositional phrase beginning with the preposition `as well as&apos; as in: {independent-argument} ... `as well as&apos; {dependent-argument}. The following sentences is an example of this relation: John went for a walk with Mary as well as Joan.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#addressee -->
@@ -83,7 +83,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:domain rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#External"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Receiver of the communicative process, e.g. ``Henry told *me* that dinner would be ready at 6:00pm.&apos;&apos; This is called &apos;receiver&apos; in Halliday and Matthiessen (1999: 130).</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#agentive -->
@@ -94,7 +94,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:range rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Element"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of participant and generalized-means that captures the notion of causal responsibility for a process&apos; perfomance.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#alphaParticipantInMultiConfiguration -->
@@ -103,7 +103,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#participantInMultiConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For binary relations: this participant defines the starting point of the MultiConfiguration.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#alternative -->
@@ -112,7 +112,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#accompaniment"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One type of accompaniment that may holds between objects which participate jointly in some process. This form of accompaniment states that the accompaniment is positive but replacing; i.e., that some object participated in a process or state as an alternative to some other. It may be expressed as a prepositional phrase beginning with the preposition `instead&apos;. as in: {independent-argument} ... `with&apos; {dependent-argument}. Note that it is not necessary for both of the participants to be aware of the participation. Thus both of the following sentences are examples of this relation: (1) John went for a walk with Joan instead of Mary. (2) John went for a walk with his blue shoes instead of his white ones.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#anterior -->
@@ -121,7 +121,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#temporalOrdering"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between intervals that specifies their order in time. A type of temporal locating, a spatio-temporal circumstantial. Here one interval is said to be prior to	another.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#attribuend -->
@@ -130,7 +130,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#participantInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The participant in a scaled comparison whose possession of a quality is being compared.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#attribute -->
@@ -139,7 +139,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#participantInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The role played by the value in a Relating (HM 1999: 151).</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#beneficiary -->
@@ -148,7 +148,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#participantInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A transitivity function in the clause, according to the generalized ergative transitivity model: the participant benefitting from the actualization of the combination of Process+Medium. In a material clause, it is the Recipient (My aunt gave *the farmer* a duckpress) or the Client (Pour *me* out a cold Dos Equis beer) and in a verbal one, it is the addressee (Joe told *us* all about Eve). It also occurs in a few relational clause types (I owe *you* an apology) and mental clauses (I envy *you* your luck; I don&apos;t begrudge *you* your happiness).</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#betaParticipantInMultiConfiguration -->
@@ -157,7 +157,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#participantInMultiConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For binary relations: this participant is dependent on the first participant of the MultiConfiguration. It usually extends the first participant.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#carrier -->
@@ -167,7 +167,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:range rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SimpleThing"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The role played by the thing that has attributes or is identified in Relatings (HM 1999: 183).</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#causalRelation -->
@@ -176,7 +176,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#circumstanceInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Causal-relation logically has two roles: cause (the domain) and effect (the range). At this most general level, causality may be expressed as: {effect} `because&apos; {cause}, or {cause} `cause&apos; {effect}.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#causeEffect -->
@@ -185,7 +185,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#causalRelation"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This captures the relationship of one thing being the cause of another, the effect.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#circumstanceInConfiguration -->
@@ -196,7 +196,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:range rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Element"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This relates a Configuration to a Circumstance.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#client -->
@@ -207,7 +207,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:range rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Element"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The role of beneficiary where something is done for another person.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#compareQuality -->
@@ -216,7 +216,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#participantInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The slot in a scaled comparison that contains that quality with respect to which an object (the attribuend) is being compared.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#comparison -->
@@ -225,7 +225,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#circumstanceInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This category encompasses relations which indicate how similar or dissimilar two entities are. One subcategory is so-far discriminated: SIMILARITY. Difference could be presented as a further subtype, and equality could be a further specialization of similarity. Verbs articulated by this category include: `resemble&apos;, `differ from&apos;, `be similar to&apos;, `be different than&apos;, `be like&apos;, `match&apos;, `fit&apos;, etc. A grammatical characteristic of entities in this category is that they are symmetric, i.e. subject and object can be interchanged without passivization. Note however, that the passive form is still possible. For example, `` Henry resembles Joan. Joan resembles Henry. Joan is resembled by Henry.&apos;&apos;</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#concessive -->
@@ -234,7 +234,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#causalRelation"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One type of generalized causation relationship. This relation states that some process occured despite some other event or state of affairs holding. It is typically realized in English by the preposition `despite&apos; therefore.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#concurrent -->
@@ -243,7 +243,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#temporalOrdering"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concurrent temporal intervals overlap or occupy the same moments of time (from MUM 1994).</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#condition -->
@@ -252,7 +252,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#reason"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A conditional relation describing a more general reason relation, e.g. &quot;if...then&quot;.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#difference -->
@@ -261,7 +261,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#comparison"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sub-type of the comparison relationship that picks out negative comparison.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#domain -->
@@ -270,7 +270,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#participantInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One of the required relations in a Relating. Necessary for generation, but could be deleted later if the generator is changed.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#enablement -->
@@ -279,7 +279,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#generalizedMeans"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of generalized means; this relation refers to a possible enabling relationship between the actualization of some process or state of affairs and an entity, state of affairs, or other process.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#exclusive -->
@@ -288,7 +288,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#accompaniment"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A subtype of accompaniment that picks out the negative nature of accompaniment; an exclusive accompaniment indicates that accompaniment occured at the expense of, or instead of some entity that did not accompany.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#exhaustiveDuration -->
@@ -297,7 +297,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#qualitativeTemporalExtent"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exhaustive duration is a relation which specifies that the process or state participating in the relation is one which holds for the entire extent of the	temporal interval participating in the relation. It is typically realized in English by the preposition `during&apos;.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#existent -->
@@ -307,7 +307,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:domain rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Existence"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This relation defines the only participant allowed in an Existential Configuration.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#extremal -->
@@ -316,7 +316,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#temporalOrdering"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation of temporal locating that explicitly orients to the end point of an interval; this establishes contrasts such as `until&apos; (extremal) vs. `before&apos; (nonextremal), and	`since&apos; (extremal) vs. `after&apos; (nonextremal).</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#follow -->
@@ -325,7 +325,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#nonExtremal"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A temporal relationship of strict precedence; it is therefore posterior and nonextremal. It is an inverse to the precede relation that is used in tense reasoning by the grammar.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#generalizedMeans -->
@@ -334,7 +334,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#circumstanceInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of participant which can be agentive, manner, instrumental, or enablemenet.	It is a generalized notion that refers to the abstract concept of the means for	actualizing some process.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#greater -->
@@ -343,7 +343,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#attribuend"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A direction of comparison in a scaled comparison: here, the quality with respect to which comparison proceeds holds more rather than less.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#gumrelation -->
@@ -353,7 +353,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:range rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#GUMThing"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The most general property a concept can have.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#hasConjunct -->
@@ -362,7 +362,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#gumrelation"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The binary relation between a Conjunction and one of its conjuncts.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#hasDisjunct -->
@@ -371,7 +371,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#gumrelation"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The binary relation between a Disjunction and one of its disjuncts.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#hasElaboration -->
@@ -380,7 +380,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#hasModification"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An elaboration of an element. Ex.: &quot;A cheerful Mexican kitchen&quot; (HM06: p183)</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#hasEnhancement -->
@@ -389,7 +389,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#hasModification"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An enhancement of an element. Ex.: &quot;This 18th century vase from Mexico&quot; (HM06: p183)</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#hasExtension -->
@@ -398,7 +398,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#hasModification"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An extension of an element. Ex.: &quot;My aunt&apos;s teapot&quot; (HM06: p183)</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#hasModification -->
@@ -408,7 +408,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:domain rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Element"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A modification of a participant in a configuration. This relation adds attributes to an element. It can be linguistically expressed as epithets, classifiers, qualifiers, etc. (HM06: p183).</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#inclusive -->
@@ -417,7 +417,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#accompaniment"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A subtype of accompaniment that picks out the positive nature of accompaniment; an exclusive accompaniment indicates that accompaniment occured in addition to	some other entity that accompanies.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#instrumental -->
@@ -426,7 +426,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#generalizedMeans"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instrument is typically expressed as: `{verb} + with&apos; where {verb} cannot be `be&apos;.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#lesser -->
@@ -435,7 +435,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#attribuend"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A direction of comparison in a scaled comparison: here the quality with respect to which comparison proceeds holds less rather than more.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#manner -->
@@ -444,7 +444,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#generalizedMeans"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A circumstantial role of a process that describes the manner in which the process&apos;	actualization is achieved. Commonly realized by adverbs in English, although there	are other possibilities also.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#material -->
@@ -453,7 +453,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#participantInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A participant role that carries information about the material from which an entity is constructed.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#metaMessage -->
@@ -462,7 +462,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#saying"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The type of information, e.g., a story or lecture, being communicated by a communicative process (from MUM 1994).</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#nonExhaustiveDuration -->
@@ -471,7 +471,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#qualitativeTemporalExtent"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An nonexhaustive duration is a relation which specifies that the process or state	participating in the relation is one which does not hold for the entire extent of the temporal interval participating in the relation. It is typically realized in English by the preposition `in&apos;.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#nonExtremal -->
@@ -480,7 +480,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#temporalOrdering"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship of temporal locating that is not oriented to the end points of an interval; examples of this distinction are: `until&apos; (extremal) vs. `before&apos; (nonextremal), and `since&apos; (extremal) vs. `after&apos; (nonextremal).</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#nonMetaMessage -->
@@ -489,7 +489,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#saying"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The information being communicated by a communicative process (from MUM 1994).</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#orderingRelation -->
@@ -498,7 +498,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#circumstanceInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The general relationship that holds between the parts of an ordered object.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#participantInConfiguration -->
@@ -508,7 +508,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:domain rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#GUMThing"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Configuration is said to `contain&apos; some number of entities that participate in its actualization. The manner of these entities is identified in terms of given role names. Participants in a process typically come from the SimpleThing hierarchy and are realized as nominal groups. Clearly there are some kinds of relations which will have actions or processes as their participants, e.g. causality.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#participantInMultiConfiguration -->
@@ -526,7 +526,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         </rdfs:range>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This property defines the participants of combinations of Configurations. For more complex structures participants can also be MultiConfigurations.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#phenomenon -->
@@ -536,7 +536,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:domain rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Internal"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The object of perception in an InternalProcessing (HM 1999: 131).</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#possessed -->
@@ -545,7 +545,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#participantInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This relation relates the configuration to an entity which has an owner (possessor).</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#possessor -->
@@ -554,7 +554,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#participantInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This relation relates the configuration to an entitiy which possesses something (possessed).</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#posterior -->
@@ -563,7 +563,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#temporalOrdering"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between intervals that specifies their order in time. A type of temporal locating, a circumstantial (somewhere under relational process) with range of a time interval and a commented out domain of a process. Here one interval is said to follow another.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#posterior-extremal -->
@@ -573,7 +573,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#posterior"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(from MUM 1994).</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#precede -->
@@ -583,7 +583,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#nonExtremal"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A temporal relationship of strict precedence; it is therefore anterior and nonextremal. It is used particularly in tense reasoning by the grammar.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#processInConfiguration -->
@@ -594,7 +594,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:range rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Process"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">That which holds between a Configuration and a Process.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#processRange -->
@@ -604,7 +604,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:domain rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#DoingAndHappening"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A participant role where the participant is not affected or altered by the actualization of the process, but instead serves more to define the nature of the process, e.g. &quot;The car turned the corner.&apos;&apos; Here the corner is the range over which the process is occurring. The reason processRange is a subclass of actee is that the filler of processRange &quot;acts like&quot; an actee, i.e. comes after the verb without a preposition intervening. (Probably in conflict with grammar.)</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#prompt -->
@@ -613,7 +613,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#participantInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The information process preceding the recent communicative process.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#purpose -->
@@ -622,7 +622,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#causalRelation"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purpose captures the notion of why something was done. They may be motivational as with `reasons&apos; but look forward rather than back.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#qualitativeTemporalExtent -->
@@ -632,7 +632,7 @@ Upper Model 4.0 is represented in OWL DL.</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A qualitative temporal extent, e.g., &quot;a long while&quot;.
 A relationship of temporal extent that is classified as qualitative. Qualitative here refers to a posited property of temporal relationships concerning how they are treated by the grammar of a language. Qualitative spatial relationships are taken to `move along with&apos; an observer. This contrasts with absolute relationships which do not accompany the observer. As an example, the notion of `today&apos;, `tomorrow&apos;, etc. do not stand still and allow the observer to pass them by, they move with the observer; this is in contrast to the notion of a `Monday&apos;, which can come and pass the observer by.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#quantitativeTemporalExtent -->
@@ -642,7 +642,7 @@ A relationship of temporal extent that is classified as qualitative. Qualitative
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quantitative temporal extent, e.g., &quot;three hours&quot;.
 A relationship of temporal extent that is classified as quantitative. Quantitative here refers to a posited property of temporal relationships concerning how they are treated by the grammar of English. Absolute temporal relationships are taken to be unchanging with respect to the observer. A relative relationship is one that moves with the observer. As an example, the notion of `today&apos;, `tomorrow&apos;, etc. do not stand still and allow the observer to pass them by, they move with the observer; this is in contrast to the notion of a `Monday&apos;, which can come and pass the observer by.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#range -->
@@ -651,7 +651,7 @@ A relationship of temporal extent that is classified as quantitative. Quantitati
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#participantInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One of the required relations in a Relating. Necessary for generation, but could be deleted later if the generator is changed.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#reason -->
@@ -660,7 +660,7 @@ A relationship of temporal extent that is classified as quantitative. Quantitati
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#causalRelation"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REASON captures the notion of motivation. Here the effect is volitional or intentional. This relation is expressed by terms such as: `since&apos;, `because&apos;. Examples include: ``Henry went to the store because he needed milk.&apos;&apos; and ``since it was raining, Henry brought his umbrella.&apos;&apos;</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#recipient -->
@@ -669,7 +669,7 @@ A relationship of temporal extent that is classified as quantitative. Quantitati
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#beneficiary"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The beneficiary participant role of a material process.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#result -->
@@ -678,7 +678,7 @@ A relationship of temporal extent that is classified as quantitative. Quantitati
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#actee"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A particular type of participant relationship to a process: identifies the participant that is in the role of being affected, acted upon, or brought into being by the	actualization of the process.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#sayer -->
@@ -688,7 +688,7 @@ A relationship of temporal extent that is classified as quantitative. Quantitati
         <rdfs:domain rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#External"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The required role in an ExternalProcess; this requires a symbolic source, a concious or non-concious being (HM 1999: 130).</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#saying -->
@@ -697,7 +697,7 @@ A relationship of temporal extent that is classified as quantitative. Quantitati
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#participantInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The information being communicated by a communicative process.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#senser -->
@@ -710,7 +710,7 @@ A relationship of temporal extent that is classified as quantitative. Quantitati
 ----unedited----
 Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid&apos;. Constructions involving qualities in this class can specify a fact as the cau--se of the mental state. For example, ``Henry was sad that he missed the performance&apos;&apos;. ``Henry was angry because the train was late&apos;&apos;. Note that such constructions are not possible with phenomenon-oriented-qualities. Some qualities fall into both categories, but are expressed differently depending on their classification. Compare: ``I am *amazed* that the earth is flat&apos;&apos; (senser-oriented); ``That the earth is flat is *amazing* to me&apos;&apos; (phenomenon-oriented). (Bateman, Henschel, and Rinaldi 1995: 64)</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#similarity -->
@@ -719,7 +719,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#comparison"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sub-type of the comparison relationship that picks out positive comparison.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#since -->
@@ -728,7 +728,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#posterior-extremal"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(from MUM 1994).</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#spatialCircumstance -->
@@ -737,7 +737,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#spatialTemporalCircumstance"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This describes the relation of two entites in space.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#spatialTemporalCircumstance -->
@@ -746,7 +746,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#circumstanceInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This relation represents all circumstantial spatial or temporal relations of any configuration.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#standard -->
@@ -755,7 +755,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#participantInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The standard against which comparison is drawn in a scaled comparison.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#subjectMatter -->
@@ -764,7 +764,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#circumstanceInConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expressed as: be about, as in: ``This document is about the entity hierarchy.&apos;&apos;</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#temporalCircumstance -->
@@ -773,7 +773,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#spatialTemporalCircumstance"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This describes the relation of two entites in time.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#temporalExtent -->
@@ -783,7 +783,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <rdfs:range rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalObject"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A temporal relation of specifying the time that a state of affairs or process holds (e.g. `for 5 years&apos;).</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#temporalInclusive -->
@@ -792,7 +792,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#concurrent"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In a temporal inclusive relation, the first interval completely includes or covers the second (from MUM 1994).</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#temporalLocating -->
@@ -801,7 +801,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#temporalRelation"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relationship between an object or process and its location in time.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#temporalNonOrdering -->
@@ -810,7 +810,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#temporalLocating"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A class of temporal relations that do not impose any ordering on the points or intervals they hold over. Examples of these would typically be realized in English by the prepositions `in&apos;, `at&apos;, `on&apos;, etc.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#temporalOrdering -->
@@ -820,7 +820,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#temporalLocating"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ordering relation that can hold between points or intervals in time.</rdfs:comment>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#temporalRelation -->
@@ -829,10 +829,10 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <rdfs:subPropertyOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#temporalCircumstance"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TEMPORAL-RELATION is often expressed using `be at&apos;. It may also be expressed as a prepositional phrase beginning with a preposition such as `before&apos; or `after&apos;. Further discriminations select between these possibilities.</rdfs:comment>
     </owl:ObjectProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -840,7 +840,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.w3.org/2002/07/owl#Thing -->
@@ -848,7 +848,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
     <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Ability -->
@@ -858,7 +858,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#GeneralPossibility"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A modal qualification of the process, with respect to the ability to perform that process; typically realized by `can&apos;.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Abstraction -->
@@ -869,7 +869,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Substance"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Something which exists in metaphorical or qualitative space rather than in physical space, e.g., truth.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#AddresseeOriented -->
@@ -886,7 +886,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonAddresseeOriented"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AddresseeOriented defines a process for which the addressee is mandatory. However, in come cases the addressee may not be expressed.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Addressing -->
@@ -902,7 +902,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonAddressing"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is mandatory for this configuration to have an addressee as a direct object.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#AddressingVerbal -->
@@ -913,7 +913,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#CommunicativeAttitude"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AddressingVerbal configurations are expressed by the use of verbs which take the addressee as a direct object.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#AffectingAction -->
@@ -929,7 +929,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonAffectingAction"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AffectingActions have an ACTEE role. They are always transitive, although they may be acteeintransitive. In this case, the actee is not specified, but is inferrable. For example, ``Henry hunts.&apos;&apos; In this case, we can infer that Henry hunts something in the category of `huntablethings&apos;. AffectingActions can always have a beneficiary of the client type. This is expressed by the prepositional phrase: `for&apos; client. Directed actions are further broken up into two subclasses depending upon whether or not the actee existed before the action occurred.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Age -->
@@ -940,7 +940,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Size"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sense and measure quality pertaining to the age of an entity.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#AgePropertyAscription -->
@@ -963,7 +963,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#UsePropertyAscription"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The type of ascription of property that ascribes a quality of age to an object.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Ambience -->
@@ -974,7 +974,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonAffectingHappening"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process describing an ambient condition, such as the weather, temperature, etc. The term &quot;Meteorological Processes&quot; is also sometimes used.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Ascription -->
@@ -985,7 +985,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Symbolization"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This two place relation captures the notion of membership in a set. In general, the domain (attribuend) will be filled by an object. The range (attribute) will be filled by a quality or by an object. Finer restrictions can be made based on the given attribute. This relation is typically expressed by the verb `be&apos;. The inverse is AscriptionInverse. Note that this relation does not claim to be exhaustive.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#AscriptionInverse -->
@@ -998,7 +998,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#PartWhole"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The inverse of the Ascription relation. ClassAscription offers an alternative to the subclass relation. For example, we may want to say &quot;John is a democrat&quot; without making John a subclass of Democrat.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#AtLeast -->
@@ -1011,7 +1011,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#LessThan"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ascription of relative quantity that puts a lower bound on the quantity ascribed.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#AtMost -->
@@ -1023,7 +1023,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#LessThan"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ascription of relative quantity that puts an upper bound on the quantity ascribed.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#BehavioralQuality -->
@@ -1037,7 +1037,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#StatusQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Behavioral qualities are qualities which characterize the behavior of a conscious being.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#BehavioralVerbal -->
@@ -1048,7 +1048,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ProperVerbal"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This concept describes processes of configurations which fall in between classes of &quot;material and verbal processes&quot; (Bateman, Henschel, and Rinaldi 1995: 42). Including both, material processes that represent human behaviours (&quot;moan&quot;, &quot;groan&quot;, etc.) and which can be used like verbal processes (e.g. projection), and verbal processes (like &quot;John is talking about the President&quot;) which do not share typical properties of verbal processes (e.g. projection).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#BeingAndHaving -->
@@ -1059,7 +1059,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SayingAndSensing"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Configuration that relates its participants rather than describing an action of one on another. In contrast to DoingANDHappening, not input of energy is required nor is it always the case that there will be change over time (HM 1999: 132).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Believe -->
@@ -1070,7 +1070,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Think"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The involuntary mental process of holding a belief.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Causal -->
@@ -1081,7 +1081,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#GeneralizedLocating"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This concept defines a Configuration, in which one of the participants is the cause of the other. Hence, one of the participants occupies the role &quot;cause&quot;, and the other one &quot;effect&quot; (Bateman, Rinaldi, and Henschel 1995, p. 33).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Circumstance -->
@@ -1093,7 +1093,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SimpleThing"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Circumstances are often realized as adverbial groups or prepositional phrases. The kinds of entities that can be used as circumstances (places, times, etc.) can also serve as participants in the appropriate configurations. Circumstances fill circumstantial roles in figures. Most circumstantial elements embody some feature of grammatical metaphor. Of those that do not, the most usual are those of time, place, manner, quality and intensity. Circumstances are realized as adverbial groups or prepositional phrases. Circumstances expressed as adverbial groups come from the CIRCUMSTANCE hierarchy, while those expressed as prepositional phrases are represented as circumstantial relations [HM99, p. ].</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Circumstantial -->
@@ -1105,7 +1105,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Intensive"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This class relates an entity to its cause, generalized location (in space, time, abstract space), or other circumstance-like entities (Bateman, Rinaldi, and Henschel 1995, p. 33).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#CircumstantialOther -->
@@ -1115,7 +1115,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#GeneralizedLocating"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This concepts captures all Circumstantial configurations which are not</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ClassAscription -->
@@ -1127,7 +1127,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ModalQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For this two place relation, both the domain (functioning as `attribuend&apos;) and the range (functioning as `attribute&apos;) are restricted to be filled by objects. This relation corresponds to the SuperClass notion. It too is often expressed by the verb `be&apos;. For example, ``Henry is a teacher.&apos;&apos;</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ClassQuality -->
@@ -1141,7 +1141,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#StatusQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This category may contain various taxonomies.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Cognition -->
@@ -1155,7 +1155,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ReactionAndEmotion"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Processes of cognition realized by the verbs `think&apos;, `believe&apos;, `know&apos;, `understand&apos;, `realize&apos;.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Color -->
@@ -1165,7 +1165,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Size"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sense and measure quality pertaining to color.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ColorPropertyAscription -->
@@ -1187,7 +1187,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#UsePropertyAscription"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The type of ascription of property that ascribes a quality of color to an object.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#CommunicativeAttitude -->
@@ -1198,7 +1198,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#MessageTransfer"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CommunicativeAttitude verbal configurations are realized by means of a verb for which the addressee as well as the message cannot be expressed by a direct complement (e.g. &quot;complain&quot;).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Conditional -->
@@ -1210,7 +1210,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Volitional"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of modal quality. Modal qualities that are conditional are expressed by `would&apos;, `might&apos;, `could&apos;, etc.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Configuration -->
@@ -1227,7 +1227,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#MultiConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Configuration, or &apos;figure&apos;, is the basic fragment of experience that embodies one quantum of change (HM 1999: 128).  It is the totality of all the Elements participating in some activity or state of affairs (Bateman, Henschel, and Rinaldi 1995: 13). Configurations are expressed at the level of the clause and potentially consist of three components: the Process itself, Participants in the Process, and Circumstances associated with the Process. A Configuration must contain just one Process. It unfolds through time.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Conjunction -->
@@ -1237,7 +1237,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Disjunction"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A logical additive combination of two or more configurations; often realized by conjoining with `and&apos;, `also&apos;, `in addition&apos;, etc.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ConsciousBeing -->
@@ -1247,7 +1247,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonConsciousThing"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An active entity that is capable of producing information that may be ascribed consciousness; e.g. a person.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#CreativeMaterialAction -->
@@ -1257,7 +1257,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#DispositiveMaterialAction"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actions in this category create their actee. For example, ``Mary baked a cake.&apos;&apos; All actions in this category can be realized using the verbs `create&apos; or `make&apos;.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#DecomposableObject -->
@@ -1267,7 +1267,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonDecomposableObject"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An object that is being viewed as being made up of parts that may be taken apart and are often given explicit linguistic recognition.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#DiffuseMatter -->
@@ -1277,7 +1277,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SpecificMatter"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Distinguish between explicit focus on referent, and more general, diffuse reference (from MUM 1994).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Disjunction -->
@@ -1286,7 +1286,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Extension"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A logical disjunctive combination of two or more configurations; often realized by conjoining with `or&apos; or `alternatively&apos;.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#DisjunctiveSet -->
@@ -1296,7 +1296,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#OrderedSet"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A set of alternatives.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Disliking -->
@@ -1307,7 +1307,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Liking"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A mental reaction that is negative towards some object or state of affairs.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#DispositiveMaterialAction -->
@@ -1316,7 +1316,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#AffectingAction"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actions in this category affect their actee. This category includes any verbs that describe an action on something that already exists, e.g. ``Eunice ate the cake.&apos;&apos;</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#DoingAndHappening -->
@@ -1341,7 +1341,7 @@ Examples include: `happy&apos;, `angry&apos;, `sad&apos;, `amused&apos;, `afraid
 
 DoingANDHappening includes both intentional actions, i.e. actions with a volitional actor, e.g. ``The mouse ran up the clock&apos;&apos; and happenings, such as Erosion and Disintegration, e.g. ``The wall came tumbling down.&apos;&apos; The role of this relation is: Actor. This should be value-restricted to simplethings excluding things created by mental processing (e.g. facts) and speech (direct or indirect). Material actions which are in the process of occurring are typically expressed in the present progressive tense. Compare the following: ``My watch says it is 4:30pm.&apos;&apos; vs. ``Henry is going to the market.&apos;&apos; Thus, a test for determining whether a concept falls into this category is to look at the natural way of expressing the concept. For example, ``The house collapses&apos;&apos; (nonprogressive) vs.  ``The house is collapsing&apos;&apos; (progressive).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#DynamicQuality -->
@@ -1353,7 +1353,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TaxonomicQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality can be stative or dynamic. A quality is dynamic if the entity possessing this quality must exert some effort in order to maintain the quality. Stative qualities hold regardless of any particular process. Dynamic qualities can be expressed using the present progressive tense, i.e. they can take the form: `X is being quality.&apos; John is being clever/skillful/creative/enthusiastic. Stative qualities cannot take this form: *John is being dead/German/tall. These can take the simple present only.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Elaboration -->
@@ -1364,7 +1364,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Extension"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An expansion such that the two configurations offer different perspectives of the same thing. E.g., `it matters a lot; it plays an important role&apos; (HM 1999: 117).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Element -->
@@ -1374,7 +1374,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#MultiConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Element is a single &apos;stand-alone&apos; object or conceptual item (Bateman, Henschel, and Rinaldi 1995, p. 13). They are expressed as constituents below the clause. Elements fill roles of Configurations.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ElementList -->
@@ -1383,7 +1383,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Part"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of PartWhole relationship, such as that holding is between a list and its elements. It is the inverse of the ElementList relation.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ElementOf -->
@@ -1392,7 +1392,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#PartOf"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The inverse of the Element relation.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Enhancement -->
@@ -1402,7 +1402,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Extension"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An expansion such that configuration qualifies the other; e.g., `it is autumn, so the leaves are turning brown&apos; (HM 1999: 117).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#EvaluativeQuality -->
@@ -1415,7 +1415,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#StatusQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualities which belong to this class are determined by some value system of some conscious being. Such a value system may be moral, aesthetic, or utilitarian. Moral qualities include `honest&apos;, `polite&apos;, `generous&apos;. `Beautiful&apos;, `neat&apos; are examples of aesthetic qualities. `Readable&apos;, `easy&apos;, and `thorough&apos; are some taskoriented qualities.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Exactly -->
@@ -1426,7 +1426,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#LessThan"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation of focusing or restricting an attribution of quantity.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Existence -->
@@ -1442,7 +1442,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Relating"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A one-place relation found, for example, in ``There is a block.&apos;&apos; Note that the notion of `state&apos; does not come out as a category of special status in the upper model. Instead, what we may think of as state is spread out over several concepts, e.g. relations and  qualities. If considerations of inferencing require the notion of state, it will be necessary to recognize it as a separate category.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Expansion -->
@@ -1452,7 +1452,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Projection"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A multiconfiguration of two configurations such that they both occupy the same order of reality, and such that one adds dimensionality to the other (HM 1999: 117).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Extension -->
@@ -1461,7 +1461,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Expansion"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An expansion such that the first configuration is additive to the other in terms of information value; e.g., `he is too young and he doesn&apos;t speak the language&apos; (HM 1999: 117).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#External -->
@@ -1477,7 +1477,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Internal"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process of communication with at least one participant playing the sayer role, and possibly an participant playing a reciever role (HM 1999: 129--130). The sayer is not necessarily an entity endowed with consciousness (HM 1999: 135).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Fearing -->
@@ -1487,7 +1487,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Liking"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A mental reaction that is negative towards some object or state of affairs and which invokes fear.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Female -->
@@ -1497,7 +1497,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Male"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A object that is to be considered female, for, e.g., pronominalization purposes.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Future -->
@@ -1510,7 +1510,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ThreeDTime"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A time interval taking place in the future.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#GUMThing -->
@@ -1518,7 +1518,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
     <owl:Class rdf:about="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#GUMThing">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The most general experiential category that can be expressed through the resources of the lexicogrammar of a language. UMThing corresponds to &apos;phenomena&apos; in Halliday and Mathiessen (1999: 48).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#GeneralPossibility -->
@@ -1527,7 +1527,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Possibility"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A general possibility relationship is a modal modification of a process that indicates that the process may occur; it is typically realized using the modal `may&apos;.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#GeneralizedLocating -->
@@ -1536,7 +1536,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Circumstantial"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A concept for specifying the location of an entity in physical space, time, or in a more abstract space (Bateman, Rinaldi, and Henschel 1995, p. 33).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#GeneralizedPossession -->
@@ -1547,7 +1547,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Intensive"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeneralizedPossession logically has two roles: POSSESSOR (the domain) and POSSESSED (the range). The notion of generalized possession is often expressed as: {possessor} `has&apos; {possessed}. In general, relations in this category can also be expressed with a possessive form, e.g. `John&apos;s book&apos;, `Henry&apos;s sister&apos;.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#GeneralizedPossessionInverse -->
@@ -1557,7 +1557,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Intensive"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The inverse of the GeneralizedPossession relation.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#GeneralizedRoleRelation -->
@@ -1569,7 +1569,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#PartWhole"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is the generalized perspective on an entity that `has some relationship&apos; with another. When no more specific information concerning available grammatical realizations is given, subtypes ({role}) of this relationship can be used to generate language of the form:  ``{domain} has {range} as {role}&apos;&apos; or ``{domain}&apos;s {role} is {range}&apos;&apos;.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#GreaterThan -->
@@ -1579,7 +1579,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#LessThan"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relative quantity ascription that specifies a range beginning at some lower bound.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#GreaterThanComparison -->
@@ -1595,7 +1595,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#LessThanComparison"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The scaled comparison that compares by stating that a quality holds more rather than less.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Hailing -->
@@ -1608,7 +1608,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Winding"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process describing a hailing condition.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#IdeaProjection -->
@@ -1618,7 +1618,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#LocutionProjection"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A projection such that the configuration in the range refers to the meaning content of what someone said or thought (HM 1999: 108).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#IdeaQuoting -->
@@ -1630,7 +1630,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#LocutionQuoting"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The projecting of an idea by a Configuration such that the projected idea is equal to the other in terms of semantic status (HM 1999: 114). E.g., &quot;Harriet thought, &apos;Should I feed the cat&apos;.&quot;</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#IdeaReporting -->
@@ -1641,7 +1641,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#LocutionReporting"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The projecting of one idea by another such that the projected idea is not equal to the other in terms of semantic status; they have different &apos;semantic weights&apos;  (HM 1999: 114) E.g., &quot;Harriet wondered whether she should feed the cat&quot;.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Identity -->
@@ -1651,7 +1651,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Symbolization"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The type of relation between entities that states that they are in some sense identical or overlapping. Sentences typical of this type of relation are `X is Y&apos;, or `X is mine&apos;.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Intensive -->
@@ -1660,7 +1660,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Relating"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intensive relations are those which ascribe a property to an object, or which identify or symbolize it.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Intention -->
@@ -1676,7 +1676,7 @@ DoingANDHappening includes both intentional actions, i.e. actions with a volitio
 ---note:
 Reaction (2.0) becomes Intention (3.0) to avoid confusion.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Internal -->
@@ -1693,7 +1693,7 @@ Reaction (2.0) becomes Intention (3.0) to avoid confusion.</rdfs:comment>
 --------
 There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Know -->
@@ -1703,7 +1703,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Think"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A mental process describing the involuntary state of knowing that something is the case.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#LessThan -->
@@ -1712,7 +1712,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NumberFocusing"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relative quantity ascription with respect to a higher bound.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#LessThanComparison -->
@@ -1727,7 +1727,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The scaled comparison that compares by stating that a quality holds less rather than more.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Liking -->
@@ -1736,7 +1736,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ReactionAndEmotion"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An involuntary favorable mental/emotional reaction to some entity or state of affairs, or a process that presupposes a favorable reaction, e.g. to `want&apos; or `strive&apos; to bring something about.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#LocutionProjection -->
@@ -1745,7 +1745,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Projection"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A projection such that the range configuration is what someone said (HM 1999: 108).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#LocutionQuoting -->
@@ -1756,7 +1756,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#LocutionReporting"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The projecting of speech by a Configuration such that the projected speech is  equal to the other in terms of semantic status (HM 1999: 114). E.g., &quot;Harriet said, &apos;Should I feed the cat&apos;.&quot;</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#LocutionReporting -->
@@ -1766,7 +1766,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Reporting"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The projecting of one locution by another such that the projected locution is not equal to the other in terms of semantic status; they have different &apos;semantic weights&apos;  (HM 1999: 114) E.g., &quot;Harriet asked whether she should feed the cat&quot;.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#LogicalPropertyAscription -->
@@ -1781,7 +1781,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#UsePropertyAscription"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">?? The type of ascription of property that ascribes a logical parameter to an object (like true or false).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#LogicalQuality -->
@@ -1791,7 +1791,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#MaterialWorldQuality"/>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ModalQuality"/>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#LogicalUniqueness -->
@@ -1800,7 +1800,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#LogicalQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Male -->
@@ -1809,7 +1809,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Person"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A object that is to be considered male, for, e.g., pronominalization purposes.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#MaterialClassQuality -->
@@ -1819,7 +1819,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ProvenanceClassQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MaterialClassQuality describes the quality of being made of a particular material, e.g. wood, metal, etc.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#MaterialPropertyAscription -->
@@ -1839,7 +1839,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#UsePropertyAscription"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The general ascription of a material world quality.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#MaterialWorldQuality -->
@@ -1849,7 +1849,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ModalQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Material qualities can be thought of as those qualities which are evident when the referent is looked at, weighed, measured, etc. Examples include: `heavy&apos;, `blue&apos;, `American&apos;, `readable&apos;, `efficient&apos;, `maintainable&apos;. The referents of these qualities are things.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#MentalActive -->
@@ -1861,7 +1861,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ReactionAndEmotion"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is another specialization of actions concerned with mental processing. Examples of verbs which would fall into this category are: `convince&apos;, `please&apos;. Also the verb `will&apos;, in the context: ``I will that something be the case&apos;&apos;.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#MentalInactive -->
@@ -1872,7 +1872,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ReactionAndEmotion"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concepts in this category describe passive, inactive mental processing. There are 3 subtypes of this category: Perception (e.g. `see`, `hear`, `taste`, `smell`, `feel`), Cognition (e.g. `think`, `believe`, `know`, `understand`, `realize`), and Reaction/Emotion/Affection (e.g. `love`, `hate`, `want`, `wish`, `fear`, `desire`.)  MentalInactives do not normally take the progressive form. Recall that materialactions do take the progressive form.Passivization is rare for most of these, except in the case where the phenomenon is a noun phrase, e.g. ``Henry likes Mary.&apos;&apos; ``Mary is liked by Henry.&apos;&apos; but not ``Henry likes to go to the races.&apos;&apos; ``*To go to the races is liked by Henry.&apos;&apos;  These also often form `reversal pairs&apos;. One of the mental actions in the pair is active, the other is inactive (or inactive), e.g.``I *like* bananas.&apos;&apos; vs.  ``Bananas *please* me.&apos;&apos; Other pairs are {fear, frighten}, {wonder, amaze}, {desire,  attract}. Compare this to actions where reversal is only possible using passive voice.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#MessageOriented -->
@@ -1888,7 +1888,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonMessageOriented"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For MessageOriented verbal processes the message is an obligatory role, although the message may not always be expressed.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#MessageTransfer -->
@@ -1898,7 +1898,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonAddresseeOriented"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MessageTransfer verbal configurations are usually realized by means of verbs having the message as a direct complement but the addressee as an indirect complement.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ModalPropertyAscription -->
@@ -1917,7 +1917,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#UsePropertyAscription"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ascription of a modal quality, typically to a process.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ModalQuality -->
@@ -1926,7 +1926,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SimpleQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualities of being able to do something, wanting to do something, having to do something, and so forth.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#MultiConfiguration -->
@@ -1947,7 +1947,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formerly labelled &apos;sequence&apos; (GUM 2.0), this is a series of related Configurations. Various sorts of Sequences are differentiated by the type of relation they enter into. Every MultiConfiguration consists of two ordered parts, a first and a second participant, which is a Configuration or a MultiConfiguration. Furthermore, MultiConfigurations are either Equative or NonEquative (HM 1999: 50).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Name -->
@@ -1956,7 +1956,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Word"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An accepted but possibly arbitrary label for some entity.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NameEvent -->
@@ -1967,7 +1967,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ProperVerbal"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process of giving something a name. It does not intrinsically require an addressee (non-addressee-oriented).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NameOf -->
@@ -1978,7 +1978,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#PartWhole"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relation that holds betwen a name and its bearer.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NameRelation -->
@@ -1989,7 +1989,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Signification"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relation that holds between a name&apos;s bearer and that name.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NamedObject -->
@@ -1998,7 +1998,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SimpleThing"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Objects which typically have names.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NaturalNumber -->
@@ -2009,7 +2009,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Word"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of abstraction referring to numerical value.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Necessity -->
@@ -2019,7 +2019,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Possibility"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An example of a modal quality.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonAddresseeOriented -->
@@ -2028,7 +2028,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ProperVerbal"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This concepts describes verbal processes that do not intrinsically require an addressee. If the addressee occurs it must always be indirect.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonAddressing -->
@@ -2043,7 +2043,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This BehavioralVerbal configuration has no direct adressee.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonAffectingAction -->
@@ -2052,7 +2052,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#DoingAndHappening"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NonAffectingActions have no `actee&apos;, or the `actee&apos; is not created or affected by the action. They are often (though not necessarily) intransitive. In the case they are transitive, the object is not affected or created by the action. Instead it specifies a range of the action. For example, ``I play the piano/ tennis.&apos;&apos; This specifies that I am capable of a typical kind of playing.  All verbs of movement are examples of NonAffectingActions, e.g. `climb&apos;, `walk&apos;, `fly&apos;, `fall&apos;, `run&apos;. Skills, such as `read (book)&apos;, `listen (music)&apos;, `speak (French), etc. are included in this category. In addition, the verbs `have&apos; as in `have lunch&apos;, `take&apos; as in `take a shower&apos;, `do&apos; as in `do a dance&apos;, and `make&apos; are in this category.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonAffectingDoing -->
@@ -2062,7 +2062,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonAffectingHappening"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An action where the &quot;actor&quot; is one who intentionally performs the action. Verbs of movement, like &quot;climb&quot;, &quot;walk&quot;, etc., are examples of such actions.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonAffectingHappening -->
@@ -2071,7 +2071,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonAffectingAction"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An action where something is happening. Also where the &quot;actor&quot; is not volitionally performing the action.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonConditional -->
@@ -2082,7 +2082,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Volitional"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of modal quality. Modal qualities that are not conditional are expressed with modalities such as: &quot;will&quot;, &quot;must&quot;, &quot;can&quot;, etc.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonConsciousThing -->
@@ -2091,7 +2091,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SimpleThing"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Some entities are just not treated by the language to be conscious. They go here.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonDecomposableObject -->
@@ -2100,7 +2100,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SimpleThing"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An object that is being regarded as not possessing significant parts, or which is not to be considered decomposable for present purposes.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonMessageOriented -->
@@ -2109,7 +2109,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ProperVerbal"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process of a NonMessageOriented configuration does not intrinsically require a message. If a message occurs it must always be indirect.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonScalableQuality -->
@@ -2119,7 +2119,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ScalableQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A NonScaleableQuality is either possessed by an object or it is not. `Empty&apos; is a nonscaleable quality. A quality is scaleable if an object may possess it to varying degrees. For example, `heavy&apos; is a scaleable quality. We can describe objects as being `very heavy&apos;, or `more&apos; or `less&apos; heavy than other objects.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonVolitional -->
@@ -2129,7 +2129,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Volitional"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A nonvolitional process is one where the actor did not take, or is not expressed as taking, direct responsibility for the process.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NumberFocusing -->
@@ -2139,7 +2139,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Quantity"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relation of being more specific about a quantity that is being ascribed. This contrasts with quantity, which provides no additional information concerning the quantity apart from its value.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#OneOrTwoDLocation -->
@@ -2149,7 +2149,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ThreeDLocation"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A spatial object that is either a line or a plane.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#OneOrTwoDTime -->
@@ -2161,7 +2161,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ThreeDTime"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A temporal object that is a time interval or smaller scale succession of time intervals, e.g. a day (in opposition to a year). This is clearly a matter of the perspective that is being drawn in particular cases.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#OrderedObject -->
@@ -2170,7 +2170,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#DecomposableObject"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of decomposable object whose parts have an intrinsic ordering of their own; for example, the elements of a list, the carriages of a train, etc. (Used to be &quot;Element&quot;.)</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#OrderedSet -->
@@ -2182,7 +2182,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TimeInterval"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A set whose elements are ordered.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#OwnedBy -->
@@ -2192,7 +2192,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#PartOf"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The inverse of the Ownership relation.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Ownership -->
@@ -2202,7 +2202,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#PartWhole"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is a relation between the owner of an object and the object. It has the same roles as GeneralizedPossession, but the possessor role could be valuerestricted to ACTIVEENTITY. Ownership may be expressed as ``{possessor} `own&apos; {possessed&gt;}&apos; or ``{possessed} `belongs to&apos; {possessor}&apos;&apos;.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Part -->
@@ -2211,7 +2211,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#PartWhole"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One of the participants in a PartWhole relation.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#PartOf -->
@@ -2220,7 +2220,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#GeneralizedPossessionInverse"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The inverse of the Part relation.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#PartWhole -->
@@ -2229,7 +2229,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#GeneralizedPossession"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is a relation between an entity and its parts. It logically has two roles: WHOLE (the domain) and PART (the range). How this relation is expressed in the language seems to depend on the type of object that fills the WHOLE role. At the most general level, this relation can be expressed as: ``{Part} `be an element of&apos; {whole} or ``{part} `be a component of&apos; {whole}&apos;&apos;, or &quot;{whole} has {part}&quot;. (The latter is inherited from the superconcept GeneralizedPossession.)</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Past -->
@@ -2240,7 +2240,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ThreeDTime"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A time interval taking place in the past.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Perception -->
@@ -2250,7 +2250,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ReactionAndEmotion"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An involuntary mental process of perceiving a phenomenon.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Person -->
@@ -2259,7 +2259,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ConsciousBeing"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of conscious being pronominalizeable by `she&apos;, `he&apos;, etc. rather than by `it&apos;.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#PolarQuality -->
@@ -2269,7 +2269,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TaxonomicQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality is polar if it has a corresponding quality describing its opposite or the absence of this quality entirely. A polar quality is not part of a larger taxonomy. E.g. `heavy&apos;/`light&apos;, `dead&apos;/`alive&apos;. All qualities which are not polar are taxonomic, i.e. the possible values can be listed. For example, the quality of being mammal is part of some taxonomy.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Possibility -->
@@ -2278,7 +2278,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonVolitional"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A general modal quality.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Present -->
@@ -2288,7 +2288,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ThreeDTime"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A time interval taking place at present.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Process -->
@@ -2299,7 +2299,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SimpleThing"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Process is the linguistic construal of `goings-on&apos; or events. Processes are similar to Configurations, but factor out Participants, Circumstances, and other elements. As such, entities classified under Process can be expressed as verbs and are frequently the main verb in a clause.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Projection -->
@@ -2308,7 +2308,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#MultiConfiguration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A semiotic projection such that a configuration of saying or thinking (the domain) &apos;projects&apos; another configuration (the range) onto a different plane of reality, that is, the `content plane&apos;, as in the reporting of what someone said or thought. The second is then dependent upon the first (HM 1999: 108, 111).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ProperVerbal -->
@@ -2317,7 +2317,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#External"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unlike BehavioralVerbal this concept describes a configuration with a regular verbal process. We distinguish between addressee-oriented (e.g. &quot;tell&quot;) and non-addressee-oriented (e.g. &quot;say&quot;), message-oriented (e.g. &quot;prove&quot;) and non-message-oriented (e.g. &quot;inform&quot;).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#PropertyAscription -->
@@ -2327,7 +2327,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#QuantityAscription"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relation describing membership in the set of entities having a particular property. This is expressed by a property that can be used as a set descriptor. For example, ``The students are intelligent.&apos;&apos; i.e. they belong to the class of intelligent ones. Note that &apos;intelligent&apos; is a quality. We need many specializations of property ascription corresponding to different types of qualities.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#PropertyOf -->
@@ -2336,7 +2336,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#AscriptionInverse"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The inverse of the PropertyAscription relation.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ProvenanceClassQuality -->
@@ -2345,7 +2345,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ClassQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Information that constrains reference by place, institution, social group or other social category of origin.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ProvenancePropertyAscription -->
@@ -2363,7 +2363,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#UsePropertyAscription"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relation of ascribing a provenance class quality to an entity.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Quantity -->
@@ -2372,7 +2372,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#QuantityAscription"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relation of ascribing a quantity to some entity. This contrasts with NumberFocusing, which provides information additional to the value of the quantity being ascribed, e.g. a range bounded by some value.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#QuantityAscription -->
@@ -2381,7 +2381,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Ascription"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relation of ascribing a quantity to an entity.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Quoting -->
@@ -2391,7 +2391,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Reporting"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Projection such the two configurations have equal status. The two have equal status as independent configurations; the projected configuration is thus projected as if it was still part of the same first-order reality (HM 1999: 111).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Raining -->
@@ -2403,7 +2403,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Winding"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process describing a raining condition.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ReactionAndEmotion -->
@@ -2412,7 +2412,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Internal"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An inactive mental process that captures an uncontrolled emotional response to something or some state of affairs in terms of its appeal. Examples would be FEARING and DISLIKING on the negative side, and LIKING on the positive side.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Relating -->
@@ -2433,7 +2433,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A configuration indicating a relation holding between two entities. A relating must contain at least a domain and an attribute.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Reporting -->
@@ -2442,7 +2442,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Projection"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A projection such the two configurations have unequal status. The latter is on a second-order plane of reality (HM 1999: 111).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#RolePlaying -->
@@ -2452,7 +2452,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Signification"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A circumstantial relationship that expresses a restriction in which a facet of one of the participants in a process is relevant for the actualization of the process. The participation of a participant which is specified in, and has a definite participant function (such as actor, goal, senser, and phenomenon to the process) is restricted to a particular role, part, or function within the particular participant function being performed. It is frequently realized in English by a prepositional phrase with the preposition `as&apos;; For example: ``As a president, he was terrible, although as a golfer he was not too bad.&apos;&apos;</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SayingAndSensing -->
@@ -2461,7 +2461,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Configuration"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Configurations that can project symbolically. Projective sequences, ie Projections, construe SayingANDSensing on two levels: the level of SayingANDSensing cum Configuration and the level of content of SayingANDSensing (HM 1999: 128--129).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ScalableQuality -->
@@ -2471,7 +2471,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TaxonomicQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality is scaleable if an object may possess it to varying degrees. For example, `heavy&apos; is a scaleable quality. We can describe objects as being `very heavy&apos;, or `more&apos; or `less&apos; heavy than other objects. A nonscaleable quality is either possessed by an object or it is not. `Empty&apos; is a nonscaleable quality.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ScaledComparison -->
@@ -2482,7 +2482,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#UsePropertyAscription"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship of comparison of an object with respect to its carrying a specified property to a greater or lesser degree.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SenseANDMeasureQuality -->
@@ -2494,7 +2494,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#StatusQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">These are qualities that are sensed or measured by conscious beings. For example, this category would include qualities of age (young, old), of weight (light, heavy), price (expensive, cheap), etc.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Signification -->
@@ -2503,7 +2503,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Symbolization"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relations concerned with Signification are linguistically realized by verbs like &quot;represent&quot;, &quot;mean&quot;, &quot;express&quot;, e.g., &quot;green means go&quot;.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SimpleQuality -->
@@ -2513,7 +2513,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SimpleThing"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualities are properties of SimpleThings and Processes. They participate in property ascription relations. Roughly speaking, qualities include anything that can be expressed as an English adjective.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SimpleThing -->
@@ -2522,7 +2522,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Element"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An entity which may participate in a configuration.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Size -->
@@ -2531,7 +2531,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SenseANDMeasureQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A property of size.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SizePropertyAscription -->
@@ -2547,7 +2547,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#UsePropertyAscription"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relationship of ascribing a size to an entity.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Snowing -->
@@ -2558,7 +2558,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Winding"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process describing a snowing condition.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Space -->
@@ -2571,7 +2571,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Time"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Space as an undecomposable mass.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SpaceInterval -->
@@ -2583,7 +2583,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TimeInterval"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Space as a decomposible set of points, intervals, or volumes.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SpacePoint -->
@@ -2595,7 +2595,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TimePoint"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Space as a point.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SpatialObject -->
@@ -2605,7 +2605,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalObject"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The general concept of spatial objects, including all points, paths, volumes, undivided wholes, etc.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SpatialTemporal -->
@@ -2614,7 +2614,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#NonConsciousThing"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The generalized timespace object, under which all time and space objects lie.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SpecificMatter -->
@@ -2623,7 +2623,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SubjectMatter"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Distinguish between explicit focus on referent, and more general, diffuse reference (from MUM 1994).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#StativeQuality -->
@@ -2632,7 +2632,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#MaterialWorldQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stative qualities hold regardless of any particular process. Dynamic qualities can be expressed using the present progressive tense, i.e. they can take the form: ``X is being *quality*.&apos;&apos; ``John is being clever/skillful/creative/enthusiastic.&apos;&apos; Stative qualities cannot. ``*John is being dead/German/tall.&apos;&apos; These can take the simple present only.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#StatusQuality -->
@@ -2643,7 +2643,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#StativeQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">StatusQuality is a quality of an object, independent of the observer. For example, specializations of this category could be the quality LIFESTATUS which would be further broken down into the classes DEAD and ALIVE.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Striving -->
@@ -2653,7 +2653,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Wanting"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of mental reaction that attempts to bring about some state of affairs or event.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SubjectMatter -->
@@ -2662,7 +2662,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Circumstance"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expressed as: be about, as in: &quot;This document is about the entity hierarchy.&apos;&apos; (from MUM 1994).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Substance -->
@@ -2673,7 +2673,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TimePoint"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E.g., water, grass, flour, butter. The bounded region for substances is not in the domain of physical space, since they are in principle indefinitely expandable in space. Rather, their bounded region is in the domain of some quality spectrum (taste, color, texture, solidity, etc.).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Sunning -->
@@ -2683,7 +2683,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Winding"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process describing a sunning condition.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Symbolization -->
@@ -2692,7 +2692,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Intensive"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This category contains relations that hold between entities and other entities they `symbolize&apos;. Concepts in this class logically have two roles: SYMBOL (the domain) and SYMBOLIZED (the range). One relation in this category is the relation between an object and a name which identifies that object.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TaxonomicQuality -->
@@ -2701,7 +2701,47 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#MaterialWorldQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All qualities which are not polar are taxonomic, i.e. the possible values can be listed. For example, the quality of being mammal is part of some taxonomy.</rdfs:comment>
     </owl:Class>
+    
 
+
+    <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalAfter -->
+
+    <owl:Class rdf:about="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalAfter">
+        <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalModality"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalAt -->
+
+    <owl:Class rdf:about="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalAt">
+        <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalModality"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalBefore -->
+
+    <owl:Class rdf:about="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalBefore">
+        <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalModality"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalFrom -->
+
+    <owl:Class rdf:about="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalFrom">
+        <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalModality"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalModality -->
+
+    <owl:Class rdf:about="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalModality">
+        <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Element"/>
+    </owl:Class>
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalObject -->
@@ -2710,7 +2750,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SpatialTemporal"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The general concept of temporal objects, including all points, paths, volumes, undivided wholes, etc.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Think -->
@@ -2719,7 +2759,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Cognition"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The mental process of thinking.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ThreeDLocation -->
@@ -2728,7 +2768,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SpaceInterval"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A three dimensional space.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ThreeDTime -->
@@ -2737,7 +2777,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TimeInterval"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A portion of time that is being viewed as of sufficiently large scale to need expression as if it were a volume within which thing occured (e.g. in 1966), rather than a plane on which things occured (e.g. on that day).</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Time -->
@@ -2749,7 +2789,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TimePoint"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Time as a general undecomposable substance.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TimeInterval -->
@@ -2760,7 +2800,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TimePoint"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A time interval.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TimePoint -->
@@ -2770,7 +2810,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#TemporalObject"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A time point.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#UMSet -->
@@ -2781,7 +2821,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <owl:disjointWith rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Word"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abstract assemblage of elements.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#UsePropertyAscription -->
@@ -2790,7 +2830,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#PropertyAscription"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relationship of ascribing a use to an entity.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Volitional -->
@@ -2799,7 +2839,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ModalQuality"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A modal quality concerned with the actor&apos;s active decision or volition in the performance of a process.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Wanting -->
@@ -2808,7 +2848,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Liking"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of mental reaction that wants to bring about some state of affairs or event.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Winding -->
@@ -2817,7 +2857,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Ambience"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process describing a winding condition.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Word -->
@@ -2826,7 +2866,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#Abstraction"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of abstraction for the representation and expression of ideas.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ZeroDLocation -->
@@ -2835,7 +2875,7 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#SpacePoint"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A point in space.</rdfs:comment>
     </owl:Class>
-
+    
 
 
     <!-- https://www.ontospace.uni-bremen.de/ontology/stable/GUM-4.owl#ZeroDTime -->
@@ -2848,5 +2888,5 @@ There is also a role for the PHENOMENON of mental processing ().</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
